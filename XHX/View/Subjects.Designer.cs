@@ -990,6 +990,7 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 0;
+            this.gridColumn9.Width = 49;
             // 
             // gcSubjectCode
             // 
@@ -1000,6 +1001,7 @@
             this.gcSubjectCode.Name = "gcSubjectCode";
             this.gcSubjectCode.Visible = true;
             this.gcSubjectCode.VisibleIndex = 1;
+            this.gcSubjectCode.Width = 49;
             // 
             // gcFullScore
             // 
@@ -1010,6 +1012,7 @@
             this.gcFullScore.Name = "gcFullScore";
             this.gcFullScore.Visible = true;
             this.gcFullScore.VisibleIndex = 2;
+            this.gcFullScore.Width = 49;
             // 
             // gridColumn11
             // 
@@ -1021,6 +1024,7 @@
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 3;
+            this.gridColumn11.Width = 59;
             // 
             // memImplemention
             // 
@@ -1045,6 +1049,7 @@
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 4;
+            this.gridColumn12.Width = 47;
             // 
             // memCheckPoint
             // 
@@ -1067,6 +1072,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 6;
+            this.gridColumn1.Width = 47;
             // 
             // cboSubjectType
             // 
@@ -1085,6 +1091,7 @@
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 7;
+            this.gridColumn13.Width = 47;
             // 
             // memDesc
             // 
@@ -1109,6 +1116,7 @@
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 8;
+            this.gridColumn14.Width = 47;
             // 
             // memAddtionDesc
             // 
@@ -1133,6 +1141,7 @@
             this.gridColumn15.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 12;
+            this.gridColumn15.Width = 47;
             // 
             // btnFile
             // 
@@ -1153,6 +1162,7 @@
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 14;
+            this.gridColumn16.Width = 47;
             // 
             // memRemark
             // 
@@ -1176,6 +1186,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 10;
+            this.gridColumn2.Width = 47;
             // 
             // memStandard
             // 
@@ -1197,6 +1208,7 @@
             this.gcLoss.Name = "gcLoss";
             this.gcLoss.Visible = true;
             this.gcLoss.VisibleIndex = 13;
+            this.gcLoss.Width = 47;
             // 
             // btnLoss
             // 
@@ -1217,6 +1229,7 @@
             this.gcInspectionStandard.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.gcInspectionStandard.Visible = true;
             this.gcInspectionStandard.VisibleIndex = 9;
+            this.gcInspectionStandard.Width = 47;
             // 
             // btnInspectionStandard
             // 
@@ -1236,6 +1249,7 @@
             this.gbScoreCheck.Name = "gbScoreCheck";
             this.gbScoreCheck.Visible = true;
             this.gbScoreCheck.VisibleIndex = 15;
+            this.gbScoreCheck.Width = 84;
             // 
             // gridColumn5
             // 
@@ -1245,6 +1259,7 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.Width = 47;
             // 
             // cboGridExamType
             // 
@@ -1260,6 +1275,7 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 17;
+            this.gridColumn6.Width = 21;
             // 
             // gridColumn7
             // 
@@ -1268,6 +1284,7 @@
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 11;
+            this.gridColumn7.Width = 47;
             // 
             // btnSroceSet
             // 
@@ -1285,6 +1302,7 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 16;
+            this.gridColumn8.Width = 73;
             // 
             // gridColumn17
             // 
@@ -1293,6 +1311,7 @@
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 18;
+            this.gridColumn17.Width = 48;
             // 
             // memImplementFile
             // 

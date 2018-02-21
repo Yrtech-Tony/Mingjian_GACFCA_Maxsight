@@ -991,34 +991,9 @@ namespace XHX.View
                     string standard = msExcelUtil.GetCellValue(worksheet_Subjects, "D", i);
                     decimal weight = Convert.ToDecimal(msExcelUtil.GetCellValue(worksheet_Subjects, "E", i));
                     int orderNo = Convert.ToInt32(msExcelUtil.GetCellValue(worksheet_Subjects, "F", i));
-
                     webService.Area_SubjectSave("201701", "0", checkItem, standard, orderNo, weight, linkCode, "sysadmin", subjectCode);
-
-
                 }
             }
-
-            //Workbook workbook = msExcelUtil.OpenExcelByMSExcel(btnModule.Text);
-            //Worksheet worksheet_FengMian = workbook.Worksheets["Subjects"] as Worksheet;
-            //for (int i = 2; i < 300; i++)
-            //{
-            //    string subjectCode = msExcelUtil.GetCellValue(worksheet_FengMian, "B", i);
-            //    if (!string.IsNullOrEmpty(subjectCode))
-            //    {
-            //        string projectCode = msExcelUtil.GetCellValue(worksheet_FengMian, "A", i);
-            //        int orderNo = 0;
-            //        decimal weight = 0;
-            //        if (!string.IsNullOrEmpty(msExcelUtil.GetCellValue(worksheet_FengMian, "C", i)))
-            //        {
-            //            orderNo = Convert.ToInt32(msExcelUtil.GetCellValue(worksheet_FengMian, "C", i));
-            //        }
-            //        if (!string.IsNullOrEmpty(msExcelUtil.GetCellValue(worksheet_FengMian, "D", i)))
-            //        {
-            //            weight = Convert.ToDecimal(msExcelUtil.GetCellValue(worksheet_FengMian, "D", i));
-            //        }
-            //        webService.UpDateSubject(projectCode, subjectCode, orderNo, weight);
-            //    }
-            //}
             CommonHandler.ShowMessage(MessageType.Information, "上传完毕");
         }
 
