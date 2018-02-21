@@ -1,4 +1,4 @@
-using System;
+锘縰sing System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,7 +49,7 @@ namespace XHX.View
             ProjectCode_Golbal = CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString();
             ShopCode_Golbal = btnShopCode.Text;
 
-            //卖场改变的时候对应的试卷类型也进行改变
+            //脗么鲁隆赂脛卤盲碌脛脢卤潞貌露脭脫娄碌脛脢脭戮铆脌脿脨脥脪虏陆酶脨脨赂脛卤盲
 
             //List<ShopSubjectExamTypeDto> list = new List<ShopSubjectExamTypeDto>();
             ShopSubjectExamTypeDto shop = new ShopSubjectExamTypeDto();
@@ -78,22 +78,22 @@ namespace XHX.View
 
         private void btnUploadData_Click(object sender, EventArgs e)
         {
-            #region 数据验证
+            #region 脢媒戮脻脩茅脰陇
             //if (CommonHandler. == 0)
             //{
-            //    CommonHandler.ShowMessage(MessageType.Information, "请选择\"项目\"");
+            //    CommonHandler.ShowMessage(MessageType.Information, "脟毛脩隆脭帽\"脧卯脛驴\"");
             //    cboProjects.Focus();
             //    return;
             //}
             if (txtShopName.Text == "")
             {
-                CommonHandler.ShowMessage(MessageType.Information, "请选择\"经销商\"");
+                CommonHandler.ShowMessage(MessageType.Information, "脟毛脩隆脭帽\"戮颅脧煤脡脤\"");
                 txtShopName.Focus();
                 return;
             }
             if (btnDataPath.Text == "")
             {
-                CommonHandler.ShowMessage(MessageType.Information, "请选择\"数据路径\"");
+                CommonHandler.ShowMessage(MessageType.Information, "脟毛脩隆脭帽\"脢媒戮脻脗路戮露\"");
                 btnDataPath.Focus();
                 return;
             }
@@ -115,13 +115,13 @@ namespace XHX.View
             }
             if (!isExistDBFile)
             {
-                CommonHandler.ShowMessage(MessageType.Information, "路径中不存在数据库文件'writeable.db'");
+                CommonHandler.ShowMessage(MessageType.Information, "脗路戮露脰脨虏禄麓忙脭脷脢媒戮脻驴芒脦脛录镁'writeable.db'");
                 return;
             }
             #endregion
             if (!RecheckStatus())
             {
-                #region 上传Answer表数据
+                #region 脡脧麓芦Answer卤铆脢媒戮脻
                 {
                     List<String> dataList = SqliteHelper.Search("SELECT ProjectCode,SubjectCode,ShopCode,Score,Remark,ImageName,InUserID,'0','',AssessmentDate,InDateTime from Answer WHERE  ProjectCode='" + ProjectCode_Golbal + "' AND ShopCode='" + ShopCode_Golbal + "'");
                     List<String> updateStringList = new List<string>();
@@ -140,7 +140,7 @@ namespace XHX.View
                 }
                 #endregion
 
-                #region 上传AnswerLog表数据
+                #region 脡脧麓芦AnswerLog卤铆脢媒戮脻
                 {
                     List<String> dataList = SqliteHelper.Search("SELECT ProjectCode,SubjectCode,ShopCode,Score,Desc,InUserID,StatusCode from AnswerLog WHERE  ProjectCode='" + ProjectCode_Golbal + "' AND ShopCode='" + ShopCode_Golbal + "'");
                     List<String> updateStringList = new List<string>();
@@ -160,7 +160,7 @@ namespace XHX.View
                 }
                 #endregion
 
-                #region 上传AnswerDtl表数据
+                #region 脡脧麓芦AnswerDtl卤铆脢媒戮脻
                 {
                     List<String> dataList = SqliteHelper.Search("SELECT ProjectCode,SubjectCode,ShopCode,SeqNO,InUserID,CheckOptionCode,PicNameList from AnswerDtl WHERE  ProjectCode='" + ProjectCode_Golbal + "' AND ShopCode='" + ShopCode_Golbal + "'");
                     List<String> updateStringList = new List<string>();
@@ -180,7 +180,7 @@ namespace XHX.View
                 }
                 #endregion
 
-                #region 上传AnswerDtl2表数据
+                #region 脡脧麓芦AnswerDtl2卤铆脢媒戮脻
                 {
                     List<String> dataList = SqliteHelper.Search("SELECT ProjectCode,SubjectCode,ShopCode,SeqNO,InUserID,CheckOptionCode from AnswerDtl2 WHERE  ProjectCode='" + ProjectCode_Golbal + "' AND ShopCode='" + ShopCode_Golbal + "'");
                     List<String> updateStringList = new List<string>();
@@ -199,7 +199,7 @@ namespace XHX.View
                     SqliteHelper.InsertOrUpdata(updateStringList);
                 }
                 #endregion
-                #region 上传AnswerDtl3表数据
+                #region 脡脧麓芦AnswerDtl3卤铆脢媒戮脻
                 {
                     List<String> dataList = SqliteHelper.Search("SELECT ProjectCode,SubjectCode,ShopCode,SeqNO,LossDesc,PicName from AnswerDtl3 WHERE ProjectCode='" + ProjectCode_Golbal + "' AND ShopCode='" + ShopCode_Golbal + "'");
                     List<String> updateStringList = new List<string>();
@@ -222,9 +222,9 @@ namespace XHX.View
             else
             {
 
-                CommonHandler.ShowMessage(MessageType.Information, "已经提交复审了，分数不会上传只会上传照片信息");
+                CommonHandler.ShowMessage(MessageType.Information, "脪脩戮颅脤谩陆禄赂麓脡贸脕脣拢卢路脰脢媒虏禄禄谩脡脧麓芦脰禄禄谩脡脧麓芦脮脮脝卢脨脜脧垄");
             }
-            #region 上传图片文件
+            #region 脡脧麓芦脥录脝卢脦脛录镁
             {
                 if (chkPic.Checked)
                 {
@@ -250,7 +250,7 @@ namespace XHX.View
                         }
                     }
                 }
-                CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕。");
+                CommonHandler.ShowMessage(MessageType.Information, "脢媒戮脻脡脧麓芦脥锚卤脧隆拢");
                 //TimeSpan ts = DateTime.Now - st;
                 //CommonHandler.ShowMessage(MessageType.Information,ts.ToString());
             }
@@ -313,7 +313,7 @@ namespace XHX.View
                         //}
                         //else
                         //{
-                        //    CommonHandler.ShowMessage(MessageType.Information, "压缩图片文件夹\"" + subjectDir.FullName + "\"失败。");
+                        //    CommonHandler.ShowMessage(MessageType.Information, "脩鹿脣玫脥录脝卢脦脛录镁录脨\"" + subjectDir.FullName + "\"脢搂掳脺隆拢");
                         //}
                     }
                     //Thread.Sleep(500);
@@ -337,11 +337,11 @@ namespace XHX.View
             }
             if (string.IsNullOrEmpty(fail))
             {
-                // CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕。");
+                // CommonHandler.ShowMessage(MessageType.Information, "脢媒戮脻脡脧麓芦脥锚卤脧隆拢");
             }
             else
             {
-                CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕。" + fail + "未上传成功");
+                CommonHandler.ShowMessage(MessageType.Information, "脢媒戮脻脡脧麓芦脥锚卤脧隆拢" + fail + "脦麓脡脧麓芦鲁脡鹿娄");
             }
             pbrProgressForUpload.Value = 0;
         }
@@ -363,7 +363,7 @@ namespace XHX.View
         {
             if (tbnSQLitePath.Text == "")
             {
-                CommonHandler.ShowMessage(MessageType.Information, "请选择\"数据路径\"");
+                CommonHandler.ShowMessage(MessageType.Information, "脟毛脩隆脭帽\"脢媒戮脻脗路戮露\"");
                 tbnSQLitePath.Focus();
                 return;
             }
@@ -385,12 +385,12 @@ namespace XHX.View
                         if (success)
                         {
                             File.Copy(sqlitePath, Path.Combine(Path.GetDirectoryName(sqlitePath), "writeable.db"), true);
-                            CommonHandler.ShowMessage(MessageType.Information, "下载成功");
+                            CommonHandler.ShowMessage(MessageType.Information, "脧脗脭脴鲁脡鹿娄");
                             pbrProgress.Value = 0;
                         }
                         else
                         {
-                            CommonHandler.ShowMessage(MessageType.Information, "下载失败\r\n" + msg);
+                            CommonHandler.ShowMessage(MessageType.Information, "脧脗脭脴脢搂掳脺\r\n" + msg);
                             pbrProgress.Value = 0;
                         }
                     }
@@ -435,7 +435,7 @@ namespace XHX.View
         {
             if (tbnSQLitePathForUpdate.Text == "")
             {
-                CommonHandler.ShowMessage(MessageType.Information, "请选择\"数据路径\"");
+                CommonHandler.ShowMessage(MessageType.Information, "脟毛脩隆脭帽\"脢媒戮脻脗路戮露\"");
                 tbnSQLitePathForUpdate.Focus();
                 return;
             }
@@ -456,12 +456,12 @@ namespace XHX.View
 
                         if (success)
                         {
-                            CommonHandler.ShowMessage(MessageType.Information, "下载成功");
+                            CommonHandler.ShowMessage(MessageType.Information, "脧脗脭脴鲁脡鹿娄");
                             pbrProgressForUpdate.Value = 0;
                         }
                         else
                         {
-                            CommonHandler.ShowMessage(MessageType.Information, "下载失败\r\n" + msg);
+                            CommonHandler.ShowMessage(MessageType.Information, "脧脗脭脴脢搂掳脺\r\n" + msg);
                             pbrProgressForUpdate.Value = 0;
                         }
                     }
@@ -484,7 +484,7 @@ namespace XHX.View
 
         #endregion
         /// <summary>
-        /// 测试大文件上传使用
+        /// 虏芒脢脭麓贸脦脛录镁脡脧麓芦脢鹿脫脙
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -493,16 +493,16 @@ namespace XHX.View
         {
 
             DateTime dt = DateTime.Now;
-            //string tempFile = Path.Combine(Path.GetTempPath(), "201503广汽丰田重庆朔龙龙腾店" + ".zip");
-            //if (ZipHelper.Zip(@"C:\Users\ElandEmp\Desktop\XHX_YIQI_Data\XHX_YIQI_Data\201503广汽丰田重庆朔龙龙腾店", tempFile, ""))
+            //string tempFile = Path.Combine(Path.GetTempPath(), "201503鹿茫脝没路谩脤茂脰脴脟矛脣路脕煤脕煤脤脷碌锚" + ".zip");
+            //if (ZipHelper.Zip(@"C:\Users\ElandEmp\Desktop\XHX_YIQI_Data\XHX_YIQI_Data\201503鹿茫脝没路谩脤茂脰脴脟矛脣路脕煤脕煤脤脷碌锚", tempFile, ""))
             //{
-            //    aliyun.PutObjectMultipart("yrtech", "Test" + @"/" + "201503广汽丰田重庆朔龙龙腾店1",
+            //    aliyun.PutObjectMultipart("yrtech", "Test" + @"/" + "201503鹿茫脝没路谩脤茂脰脴脟矛脣路脕煤脕煤脤脷碌锚1",
             //                        tempFile);
             //}
 
-            //CommonHandler.ShowMessage(MessageType.Information, "上传完毕");
+            //CommonHandler.ShowMessage(MessageType.Information, "脡脧麓芦脥锚卤脧");
 
-            DirectoryInfo shopDir = new DirectoryInfo(@"C:\Users\ElandEmp\Desktop\XHX_YIQI_Data\XHX_YIQI_Data\201503广汽丰田重庆朔龙龙腾店");
+            DirectoryInfo shopDir = new DirectoryInfo(@"C:\Users\ElandEmp\Desktop\XHX_YIQI_Data\XHX_YIQI_Data\201503鹿茫脝没路谩脤茂脰脴脟矛脣路脕煤脕煤脤脷碌锚");
             double shopDirSize = 0;
             foreach (DirectoryInfo dir in shopDir.GetDirectories())
             {
@@ -554,11 +554,11 @@ namespace XHX.View
             }
             if (string.IsNullOrEmpty(fail))
             {
-                CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕。");
+                CommonHandler.ShowMessage(MessageType.Information, "脢媒戮脻脡脧麓芦脥锚卤脧隆拢");
             }
             else
             {
-                CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕。" + fail + "未上传成功");
+                CommonHandler.ShowMessage(MessageType.Information, "脢媒戮脻脡脧麓芦脥锚卤脧隆拢" + fail + "脦麓脡脧麓芦鲁脡鹿娄");
             }
             //pbrProgressForUpload.Value = 0;
             TimeSpan ts = (DateTime.Now - dt);
@@ -600,11 +600,11 @@ namespace XHX.View
             if (this.UserInfoDto.RoleType == "S")
             {
                 service.CopyDataToSqlLite(CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString());
-                CommonHandler.ShowMessage(MessageType.Information, "更新完毕");
+                CommonHandler.ShowMessage(MessageType.Information, "赂眉脨脗脥锚卤脧");
             }
             else
             {
-                CommonHandler.ShowMessage(MessageType.Information, "不是管理员权限");
+                CommonHandler.ShowMessage(MessageType.Information, "虏禄脢脟鹿脺脌铆脭卤脠篓脧脼");
             }
         }
 

@@ -1,4 +1,4 @@
-namespace XHX
+Ôªønamespace XHX
 {
     partial class LoginForm
     {
@@ -46,50 +46,50 @@ namespace XHX
             // labelControl1
             // 
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl1.Location = new System.Drawing.Point(71, 40);
+            this.labelControl1.Location = new System.Drawing.Point(57, 37);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(36, 14);
+            this.labelControl1.Size = new System.Drawing.Size(36, 13);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "”√ªß√˚";
+            this.labelControl1.Text = "Áî®Êà∑Âêç";
             // 
             // txtUserID
             // 
             this.txtUserID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUserID.EditValue = "";
-            this.txtUserID.Location = new System.Drawing.Point(113, 40);
+            this.txtUserID.Location = new System.Drawing.Point(97, 37);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(100, 21);
+            this.txtUserID.Size = new System.Drawing.Size(86, 20);
             this.txtUserID.TabIndex = 1;
             this.txtUserID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserID_KeyPress);
             // 
             // labelControl2
             // 
             this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl2.Location = new System.Drawing.Point(83, 68);
+            this.labelControl2.Location = new System.Drawing.Point(69, 63);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(24, 14);
+            this.labelControl2.Size = new System.Drawing.Size(24, 13);
             this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "√‹¬Î";
+            this.labelControl2.Text = "ÂØÜÁ†Å";
             // 
             // txtPWD
             // 
             this.txtPWD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPWD.EditValue = "";
-            this.txtPWD.Location = new System.Drawing.Point(113, 67);
+            this.txtPWD.Location = new System.Drawing.Point(97, 62);
             this.txtPWD.Name = "txtPWD";
             this.txtPWD.Properties.PasswordChar = '*';
-            this.txtPWD.Size = new System.Drawing.Size(100, 21);
+            this.txtPWD.Size = new System.Drawing.Size(86, 20);
             this.txtPWD.TabIndex = 3;
             this.txtPWD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPWD_KeyPress);
             // 
             // btnLogin
             // 
             this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogin.Location = new System.Drawing.Point(219, 42);
+            this.btnLogin.Location = new System.Drawing.Point(188, 39);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 41);
+            this.btnLogin.Size = new System.Drawing.Size(64, 38);
             this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "µ«¬Ω";
+            this.btnLogin.Text = "ÁôªÂΩï";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panelControl1
@@ -104,38 +104,38 @@ namespace XHX
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(318, 123);
+            this.panelControl1.Size = new System.Drawing.Size(273, 114);
             this.panelControl1.TabIndex = 5;
             // 
             // chkNet
             // 
-            this.chkNet.Location = new System.Drawing.Point(113, 96);
+            this.chkNet.Location = new System.Drawing.Point(97, 89);
             this.chkNet.Name = "chkNet";
             this.chkNet.Properties.Caption = "";
-            this.chkNet.Size = new System.Drawing.Size(19, 19);
+            this.chkNet.Size = new System.Drawing.Size(16, 19);
             this.chkNet.TabIndex = 5;
             // 
             // labelControl3
             // 
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl3.Location = new System.Drawing.Point(59, 98);
+            this.labelControl3.Location = new System.Drawing.Point(51, 91);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(48, 14);
+            this.labelControl3.Size = new System.Drawing.Size(48, 13);
             this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "¡™Õ¯”Î∑Ò";
+            this.labelControl3.Text = "ËÅîÁΩë‰∏éÂê¶";
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 123);
+            this.ClientSize = new System.Drawing.Size(273, 114);
             this.Controls.Add(this.panelControl1);
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "µ«¬º√˜ºÏ∆ΩÃ®";
+            this.Text = "ÁôªÂΩïÂπøÊ±ΩËè≤ÂÖã";
             ((System.ComponentModel.ISupportInitialize)(this.txtUserID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPWD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

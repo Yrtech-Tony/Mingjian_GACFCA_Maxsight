@@ -81,7 +81,7 @@
   <ItemGroup>
     <Reference Include="Aliyun.OpenServices, Version=1.0.5290.21916, Culture=neutral, PublicKeyToken=0ad4175f0dac0b9b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\ElandEmp\Desktop\aliyun_dotnet_sdk_20140626\bin\Aliyun.OpenServices.dll</HintPath>
+      <HintPath>..\Lib\Aliyun.OpenServices.dll</HintPath>
     </Reference>
     <Reference Include="AxInterop.DSOFramer, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
