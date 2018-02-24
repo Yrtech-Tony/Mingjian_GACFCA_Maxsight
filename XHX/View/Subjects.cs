@@ -1007,7 +1007,7 @@ namespace XHX.View
                     string SubjectDelChk= msExcelUtil.GetCellValue(worksheet_Subjects, "P", i);
                     string Weight= msExcelUtil.GetCellValue(worksheet_Subjects, "Q", i);
                     webService.SaveSubject('I', projectCode, subjectCode, Implementation, checkPoint, Desc, AdditionalDesc, InspectionDesc, "", Remark, Convert.ToInt32(orderNo), linkCode, Convert.ToDecimal(fullScore),
-                        Convert.ToBoolean(ScoreCheck), subjectTypeCode, SubjectTypeCodeExam, Convert.ToBoolean(SubjectDelChk), Convert.ToBoolean(AddErrorChk), Convert.ToDecimal(Weight));
+                        Convert.ToBoolean(Convert.ToInt32(ScoreCheck)), subjectTypeCode, SubjectTypeCodeExam, Convert.ToBoolean(Convert.ToInt32(SubjectDelChk)), Convert.ToBoolean(Convert.ToInt32(AddErrorChk)), Convert.ToDecimal(Weight));
                 }
 
             }

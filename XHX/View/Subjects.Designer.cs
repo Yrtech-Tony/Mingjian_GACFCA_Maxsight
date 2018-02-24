@@ -217,7 +217,7 @@
             this.panelControl3.Location = new System.Drawing.Point(5, 5);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(988, 50);
+            this.panelControl3.Size = new System.Drawing.Size(988, 46);
             this.panelControl3.TabIndex = 12;
             // 
             // grdShop
@@ -231,57 +231,57 @@
             this.grdShop.Location = new System.Drawing.Point(2, 2);
             this.grdShop.Margin = new System.Windows.Forms.Padding(0);
             this.grdShop.Name = "grdShop";
-            this.grdShop.Size = new System.Drawing.Size(984, 46);
+            this.grdShop.Size = new System.Drawing.Size(984, 42);
             this.grdShop.TabIndex = 27;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(636, 22);
+            this.label2.Location = new System.Drawing.Point(636, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 7;
             this.label2.Text = "新期号";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(433, 22);
+            this.label1.Location = new System.Drawing.Point(433, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 6;
             this.label1.Text = "原期号";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(496, 17);
+            this.textBox2.Location = new System.Drawing.Point(496, 16);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(100, 21);
             this.textBox2.TabIndex = 5;
             // 
             // btnAddNewData
             // 
-            this.btnAddNewData.Location = new System.Drawing.Point(818, 17);
+            this.btnAddNewData.Location = new System.Drawing.Point(818, 16);
             this.btnAddNewData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddNewData.Name = "btnAddNewData";
             this.btnAddNewData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAddNewData.Size = new System.Drawing.Size(134, 24);
+            this.btnAddNewData.Size = new System.Drawing.Size(134, 22);
             this.btnAddNewData.TabIndex = 3;
             this.btnAddNewData.Text = "复制一期新数据";
             this.btnAddNewData.Click += new System.EventHandler(this.btnAddNewData_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(712, 18);
+            this.textBox1.Location = new System.Drawing.Point(712, 17);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 4;
             // 
             // labelControl4
             // 
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelControl4.Location = new System.Drawing.Point(5, 55);
+            this.labelControl4.Location = new System.Drawing.Point(5, 51);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(988, 5);
@@ -295,11 +295,11 @@
             // 
             this.grcProject.Dock = System.Windows.Forms.DockStyle.Top;
             this.grcProject.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grcProject.Location = new System.Drawing.Point(5, 60);
+            this.grcProject.Location = new System.Drawing.Point(5, 56);
             this.grcProject.MainView = this.grvProject;
             this.grcProject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grcProject.Name = "grcProject";
-            this.grcProject.Size = new System.Drawing.Size(988, 96);
+            this.grcProject.Size = new System.Drawing.Size(988, 89);
             this.grcProject.TabIndex = 26;
             this.grcProject.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvProject,
@@ -374,7 +374,7 @@
             // 
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelControl1.Location = new System.Drawing.Point(5, 156);
+            this.labelControl1.Location = new System.Drawing.Point(5, 145);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(988, 5);
@@ -386,12 +386,12 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(5, 161);
+            this.tabControl1.Location = new System.Drawing.Point(5, 150);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(5, 3);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(988, 498);
+            this.tabControl1.Size = new System.Drawing.Size(988, 458);
             this.tabControl1.TabIndex = 29;
             // 
             // tabPage1
@@ -401,7 +401,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(980, 472);
+            this.tabPage1.Size = new System.Drawing.Size(980, 432);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "章节";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -416,14 +416,14 @@
             this.panelControl2.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panelControl2.Size = new System.Drawing.Size(974, 468);
+            this.panelControl2.Size = new System.Drawing.Size(974, 428);
             this.panelControl2.TabIndex = 27;
             // 
             // grcCharter
             // 
             this.grcCharter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grcCharter.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grcCharter.Location = new System.Drawing.Point(2, 48);
+            this.grcCharter.Location = new System.Drawing.Point(2, 45);
             this.grcCharter.MainView = this.grvCharter;
             this.grcCharter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grcCharter.Name = "grcCharter";
@@ -432,7 +432,7 @@
             this.repositoryItemMemoExEdit2,
             this.repositoryItemButtonEdit1,
             this.btnDetail});
-            this.grcCharter.Size = new System.Drawing.Size(970, 418);
+            this.grcCharter.Size = new System.Drawing.Size(970, 381);
             this.grcCharter.TabIndex = 38;
             this.grcCharter.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvCharter});
@@ -568,16 +568,16 @@
             this.panelControl1.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panelControl1.Size = new System.Drawing.Size(970, 41);
+            this.panelControl1.Size = new System.Drawing.Size(970, 38);
             this.panelControl1.TabIndex = 37;
             // 
             // btnCharterDelRow
             // 
             this.btnCharterDelRow.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCharterDelRow.Location = new System.Drawing.Point(726, 11);
+            this.btnCharterDelRow.Location = new System.Drawing.Point(726, 10);
             this.btnCharterDelRow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCharterDelRow.Name = "btnCharterDelRow";
-            this.btnCharterDelRow.Size = new System.Drawing.Size(75, 25);
+            this.btnCharterDelRow.Size = new System.Drawing.Size(75, 23);
             this.btnCharterDelRow.TabIndex = 4;
             this.btnCharterDelRow.Text = "删除行";
             this.btnCharterDelRow.Click += new System.EventHandler(this.btnCharterDelRow_Click);
@@ -585,10 +585,10 @@
             // btnCharterAddRow
             // 
             this.btnCharterAddRow.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCharterAddRow.Location = new System.Drawing.Point(807, 11);
+            this.btnCharterAddRow.Location = new System.Drawing.Point(807, 10);
             this.btnCharterAddRow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCharterAddRow.Name = "btnCharterAddRow";
-            this.btnCharterAddRow.Size = new System.Drawing.Size(75, 25);
+            this.btnCharterAddRow.Size = new System.Drawing.Size(75, 23);
             this.btnCharterAddRow.TabIndex = 0;
             this.btnCharterAddRow.Text = "添加行";
             this.btnCharterAddRow.Click += new System.EventHandler(this.btnCharterAddRow_Click);
@@ -596,10 +596,10 @@
             // btnCharterSave
             // 
             this.btnCharterSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCharterSave.Location = new System.Drawing.Point(888, 11);
+            this.btnCharterSave.Location = new System.Drawing.Point(888, 10);
             this.btnCharterSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCharterSave.Name = "btnCharterSave";
-            this.btnCharterSave.Size = new System.Drawing.Size(75, 25);
+            this.btnCharterSave.Size = new System.Drawing.Size(75, 23);
             this.btnCharterSave.TabIndex = 3;
             this.btnCharterSave.Text = "保存";
             this.btnCharterSave.Click += new System.EventHandler(this.btnCharterSave_Click);
@@ -625,7 +625,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(980, 470);
+            this.tabPage2.Size = new System.Drawing.Size(980, 434);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "环节";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -634,7 +634,7 @@
             // 
             this.grcLink.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grcLink.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grcLink.Location = new System.Drawing.Point(3, 94);
+            this.grcLink.Location = new System.Drawing.Point(3, 88);
             this.grcLink.MainView = this.grvLink;
             this.grcLink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grcLink.Name = "grcLink";
@@ -643,7 +643,7 @@
             this.repositoryItemMemoExEdit4,
             this.repositoryItemButtonEdit2,
             this.btnLinkDetail});
-            this.grcLink.Size = new System.Drawing.Size(974, 374);
+            this.grcLink.Size = new System.Drawing.Size(974, 344);
             this.grcLink.TabIndex = 30;
             this.grcLink.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvLink});
@@ -773,7 +773,7 @@
             // 
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelControl6.Location = new System.Drawing.Point(3, 89);
+            this.labelControl6.Location = new System.Drawing.Point(3, 83);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(974, 5);
@@ -786,49 +786,49 @@
             this.panelControl7.Controls.Add(this.cboProject);
             this.panelControl7.Controls.Add(this.labelControl5);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl7.Location = new System.Drawing.Point(3, 48);
+            this.panelControl7.Location = new System.Drawing.Point(3, 45);
             this.panelControl7.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panelControl7.Size = new System.Drawing.Size(974, 41);
+            this.panelControl7.Size = new System.Drawing.Size(974, 38);
             this.panelControl7.TabIndex = 32;
             // 
             // cboChapter
             // 
-            this.cboChapter.Location = new System.Drawing.Point(283, 13);
+            this.cboChapter.Location = new System.Drawing.Point(283, 12);
             this.cboChapter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboChapter.Name = "cboChapter";
             this.cboChapter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboChapter.Size = new System.Drawing.Size(100, 20);
+            this.cboChapter.Size = new System.Drawing.Size(100, 21);
             this.cboChapter.TabIndex = 9;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(235, 13);
+            this.labelControl3.Location = new System.Drawing.Point(235, 12);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(24, 13);
+            this.labelControl3.Size = new System.Drawing.Size(24, 14);
             this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "章节";
             // 
             // cboProject
             // 
-            this.cboProject.Location = new System.Drawing.Point(65, 13);
+            this.cboProject.Location = new System.Drawing.Point(65, 12);
             this.cboProject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboProject.Name = "cboProject";
             this.cboProject.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboProject.Size = new System.Drawing.Size(100, 20);
+            this.cboProject.Size = new System.Drawing.Size(100, 21);
             this.cboProject.TabIndex = 7;
             this.cboProject.SelectedIndexChanged += new System.EventHandler(this.cboProject_SelectedIndexChanged);
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(17, 13);
+            this.labelControl5.Location = new System.Drawing.Point(17, 12);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(36, 13);
+            this.labelControl5.Size = new System.Drawing.Size(36, 14);
             this.labelControl5.TabIndex = 6;
             this.labelControl5.Text = "项目名";
             // 
@@ -836,7 +836,7 @@
             // 
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelControl2.Location = new System.Drawing.Point(3, 43);
+            this.labelControl2.Location = new System.Drawing.Point(3, 40);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(974, 5);
@@ -853,16 +853,16 @@
             this.panelControl6.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl6.Name = "panelControl6";
             this.panelControl6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panelControl6.Size = new System.Drawing.Size(974, 41);
+            this.panelControl6.Size = new System.Drawing.Size(974, 38);
             this.panelControl6.TabIndex = 29;
             // 
             // btnLinkDelRow
             // 
             this.btnLinkDelRow.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnLinkDelRow.Location = new System.Drawing.Point(731, 9);
+            this.btnLinkDelRow.Location = new System.Drawing.Point(731, 8);
             this.btnLinkDelRow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLinkDelRow.Name = "btnLinkDelRow";
-            this.btnLinkDelRow.Size = new System.Drawing.Size(75, 25);
+            this.btnLinkDelRow.Size = new System.Drawing.Size(75, 23);
             this.btnLinkDelRow.TabIndex = 5;
             this.btnLinkDelRow.Text = "删除行";
             this.btnLinkDelRow.Click += new System.EventHandler(this.btnLinkDelRow_Click);
@@ -870,10 +870,10 @@
             // btnLinkSearch
             // 
             this.btnLinkSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnLinkSearch.Location = new System.Drawing.Point(650, 9);
+            this.btnLinkSearch.Location = new System.Drawing.Point(650, 8);
             this.btnLinkSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLinkSearch.Name = "btnLinkSearch";
-            this.btnLinkSearch.Size = new System.Drawing.Size(75, 25);
+            this.btnLinkSearch.Size = new System.Drawing.Size(75, 23);
             this.btnLinkSearch.TabIndex = 4;
             this.btnLinkSearch.Text = "查询";
             this.btnLinkSearch.Click += new System.EventHandler(this.btnLinkSearch_Click);
@@ -881,10 +881,10 @@
             // btnLinkSave
             // 
             this.btnLinkSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnLinkSave.Location = new System.Drawing.Point(894, 9);
+            this.btnLinkSave.Location = new System.Drawing.Point(894, 8);
             this.btnLinkSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLinkSave.Name = "btnLinkSave";
-            this.btnLinkSave.Size = new System.Drawing.Size(75, 25);
+            this.btnLinkSave.Size = new System.Drawing.Size(75, 23);
             this.btnLinkSave.TabIndex = 3;
             this.btnLinkSave.Text = "保存";
             this.btnLinkSave.Click += new System.EventHandler(this.btnLinkSave_Click);
@@ -892,10 +892,10 @@
             // btnLinkAddRow
             // 
             this.btnLinkAddRow.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnLinkAddRow.Location = new System.Drawing.Point(812, 9);
+            this.btnLinkAddRow.Location = new System.Drawing.Point(812, 8);
             this.btnLinkAddRow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLinkAddRow.Name = "btnLinkAddRow";
-            this.btnLinkAddRow.Size = new System.Drawing.Size(75, 25);
+            this.btnLinkAddRow.Size = new System.Drawing.Size(75, 23);
             this.btnLinkAddRow.TabIndex = 0;
             this.btnLinkAddRow.Text = "添加行";
             this.btnLinkAddRow.Click += new System.EventHandler(this.btnLinkAddRow_Click);
@@ -908,7 +908,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(980, 472);
+            this.tabPage3.Size = new System.Drawing.Size(980, 432);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "执行文件";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -920,17 +920,17 @@
             this.panelControl4.Controls.Add(this.panelControl8);
             this.panelControl4.Controls.Add(this.labelControl8);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(3, 48);
+            this.panelControl4.Location = new System.Drawing.Point(3, 44);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(974, 422);
+            this.panelControl4.Size = new System.Drawing.Size(974, 386);
             this.panelControl4.TabIndex = 26;
             // 
             // grcSubject
             // 
             this.grcSubject.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grcSubject.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grcSubject.Location = new System.Drawing.Point(2, 53);
+            this.grcSubject.Location = new System.Drawing.Point(2, 50);
             this.grcSubject.MainView = this.grvSubject;
             this.grcSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grcSubject.Name = "grcSubject";
@@ -949,7 +949,7 @@
             this.cboGridExamType,
             this.repositoryItemCheckEdit1,
             this.btnSroceSet});
-            this.grcSubject.Size = new System.Drawing.Size(970, 367);
+            this.grcSubject.Size = new System.Drawing.Size(970, 334);
             this.grcSubject.TabIndex = 37;
             this.grcSubject.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvSubject});
@@ -1335,7 +1335,7 @@
             // 
             this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelControl9.Location = new System.Drawing.Point(2, 48);
+            this.labelControl9.Location = new System.Drawing.Point(2, 45);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(970, 5);
@@ -1356,84 +1356,84 @@
             this.panelControl8.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl8.Name = "panelControl8";
             this.panelControl8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panelControl8.Size = new System.Drawing.Size(970, 41);
+            this.panelControl8.Size = new System.Drawing.Size(970, 38);
             this.panelControl8.TabIndex = 35;
             // 
             // cboExamType
             // 
-            this.cboExamType.Location = new System.Drawing.Point(660, 13);
+            this.cboExamType.Location = new System.Drawing.Point(660, 12);
             this.cboExamType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboExamType.Name = "cboExamType";
             this.cboExamType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboExamType.Size = new System.Drawing.Size(100, 20);
+            this.cboExamType.Size = new System.Drawing.Size(100, 21);
             this.cboExamType.TabIndex = 15;
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(616, 13);
+            this.labelControl14.Location = new System.Drawing.Point(616, 12);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(29, 13);
+            this.labelControl14.Size = new System.Drawing.Size(32, 14);
             this.labelControl14.TabIndex = 14;
             this.labelControl14.Text = "A/B卷";
             // 
             // cboLink
             // 
-            this.cboLink.Location = new System.Drawing.Point(479, 13);
+            this.cboLink.Location = new System.Drawing.Point(479, 12);
             this.cboLink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboLink.Name = "cboLink";
             this.cboLink.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboLink.Size = new System.Drawing.Size(100, 20);
+            this.cboLink.Size = new System.Drawing.Size(100, 21);
             this.cboLink.TabIndex = 11;
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(436, 13);
+            this.labelControl12.Location = new System.Drawing.Point(436, 12);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(24, 13);
+            this.labelControl12.Size = new System.Drawing.Size(24, 14);
             this.labelControl12.TabIndex = 10;
             this.labelControl12.Text = "环节";
             // 
             // cboChapterForSubject
             // 
-            this.cboChapterForSubject.Location = new System.Drawing.Point(283, 13);
+            this.cboChapterForSubject.Location = new System.Drawing.Point(283, 12);
             this.cboChapterForSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboChapterForSubject.Name = "cboChapterForSubject";
             this.cboChapterForSubject.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboChapterForSubject.Size = new System.Drawing.Size(100, 20);
+            this.cboChapterForSubject.Size = new System.Drawing.Size(100, 21);
             this.cboChapterForSubject.TabIndex = 9;
             this.cboChapterForSubject.SelectedIndexChanged += new System.EventHandler(this.cboChapterForSubject_SelectedIndexChanged);
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(235, 13);
+            this.labelControl10.Location = new System.Drawing.Point(235, 12);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(24, 13);
+            this.labelControl10.Size = new System.Drawing.Size(24, 14);
             this.labelControl10.TabIndex = 8;
             this.labelControl10.Text = "章节";
             // 
             // cboProjectForSubject
             // 
-            this.cboProjectForSubject.Location = new System.Drawing.Point(65, 13);
+            this.cboProjectForSubject.Location = new System.Drawing.Point(65, 12);
             this.cboProjectForSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboProjectForSubject.Name = "cboProjectForSubject";
             this.cboProjectForSubject.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboProjectForSubject.Size = new System.Drawing.Size(100, 20);
+            this.cboProjectForSubject.Size = new System.Drawing.Size(100, 21);
             this.cboProjectForSubject.TabIndex = 7;
             this.cboProjectForSubject.SelectedIndexChanged += new System.EventHandler(this.cboProjectForSubject_SelectedIndexChanged);
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(17, 13);
+            this.labelControl11.Location = new System.Drawing.Point(17, 12);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(36, 13);
+            this.labelControl11.Size = new System.Drawing.Size(36, 14);
             this.labelControl11.TabIndex = 6;
             this.labelControl11.Text = "项目名";
             // 
@@ -1462,16 +1462,16 @@
             this.panelControl5.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl5.Name = "panelControl5";
             this.panelControl5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panelControl5.Size = new System.Drawing.Size(974, 46);
+            this.panelControl5.Size = new System.Drawing.Size(974, 42);
             this.panelControl5.TabIndex = 25;
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.simpleButton2.Location = new System.Drawing.Point(890, 11);
+            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.simpleButton2.Location = new System.Drawing.Point(890, 10);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 25);
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 102;
             this.simpleButton2.Text = "Excel下载";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -1479,9 +1479,9 @@
             // simpleButton1
             // 
             this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.simpleButton1.Location = new System.Drawing.Point(509, 9);
+            this.simpleButton1.Location = new System.Drawing.Point(509, 8);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(82, 27);
+            this.simpleButton1.Size = new System.Drawing.Size(82, 25);
             this.simpleButton1.TabIndex = 101;
             this.simpleButton1.Text = "上传数据";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -1490,30 +1490,30 @@
             // 
             this.labelControl13.Appearance.Options.UseTextOptions = true;
             this.labelControl13.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl13.Location = new System.Drawing.Point(158, 16);
+            this.labelControl13.Location = new System.Drawing.Point(158, 15);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(48, 13);
+            this.labelControl13.Size = new System.Drawing.Size(48, 14);
             this.labelControl13.TabIndex = 100;
             this.labelControl13.Text = "模板路径";
             // 
             // btnModule
             // 
             this.btnModule.EditValue = "";
-            this.btnModule.Location = new System.Drawing.Point(217, 13);
+            this.btnModule.Location = new System.Drawing.Point(217, 12);
             this.btnModule.Name = "btnModule";
             this.btnModule.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.btnModule.Size = new System.Drawing.Size(287, 20);
+            this.btnModule.Size = new System.Drawing.Size(287, 21);
             this.btnModule.TabIndex = 99;
             this.btnModule.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnModule_ButtonClick);
             // 
             // btnSearchSubject
             // 
             this.btnSearchSubject.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSearchSubject.Location = new System.Drawing.Point(594, 11);
+            this.btnSearchSubject.Location = new System.Drawing.Point(594, 10);
             this.btnSearchSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchSubject.Name = "btnSearchSubject";
-            this.btnSearchSubject.Size = new System.Drawing.Size(75, 25);
+            this.btnSearchSubject.Size = new System.Drawing.Size(75, 23);
             this.btnSearchSubject.TabIndex = 4;
             this.btnSearchSubject.Text = "查询";
             this.btnSearchSubject.Click += new System.EventHandler(this.btnSearchSubject_Click);
@@ -1521,10 +1521,10 @@
             // btnSave_Down
             // 
             this.btnSave_Down.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSave_Down.Location = new System.Drawing.Point(816, 11);
+            this.btnSave_Down.Location = new System.Drawing.Point(816, 10);
             this.btnSave_Down.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave_Down.Name = "btnSave_Down";
-            this.btnSave_Down.Size = new System.Drawing.Size(75, 25);
+            this.btnSave_Down.Size = new System.Drawing.Size(75, 23);
             this.btnSave_Down.TabIndex = 3;
             this.btnSave_Down.Text = "保存";
             this.btnSave_Down.Click += new System.EventHandler(this.btnSave_Down_Click);
@@ -1532,10 +1532,10 @@
             // btnDelRow
             // 
             this.btnDelRow.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnDelRow.Location = new System.Drawing.Point(742, 11);
+            this.btnDelRow.Location = new System.Drawing.Point(742, 10);
             this.btnDelRow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelRow.Name = "btnDelRow";
-            this.btnDelRow.Size = new System.Drawing.Size(75, 25);
+            this.btnDelRow.Size = new System.Drawing.Size(75, 23);
             this.btnDelRow.TabIndex = 2;
             this.btnDelRow.Text = "删除行";
             this.btnDelRow.Click += new System.EventHandler(this.btnDelRow_Click);
@@ -1543,17 +1543,17 @@
             // btnAddRow_Down
             // 
             this.btnAddRow_Down.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAddRow_Down.Location = new System.Drawing.Point(668, 11);
+            this.btnAddRow_Down.Location = new System.Drawing.Point(668, 10);
             this.btnAddRow_Down.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddRow_Down.Name = "btnAddRow_Down";
-            this.btnAddRow_Down.Size = new System.Drawing.Size(75, 25);
+            this.btnAddRow_Down.Size = new System.Drawing.Size(75, 23);
             this.btnAddRow_Down.TabIndex = 0;
             this.btnAddRow_Down.Text = "添加行";
             this.btnAddRow_Down.Click += new System.EventHandler(this.btnAddRow_Down_Click);
             // 
             // Subjects
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.tabControl1);
@@ -1564,7 +1564,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Subjects";
             this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(998, 664);
+            this.Size = new System.Drawing.Size(998, 613);
             this.Load += new System.EventHandler(this.Subjects_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
