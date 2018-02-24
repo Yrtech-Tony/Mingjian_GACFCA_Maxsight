@@ -52,7 +52,9 @@ namespace XHX.View
             List.Add(file);
 
             CommonHandler.BindComboBoxItems<FileTypeDto>(comFileType, List, "FileTypeName", "FileType");
-            SearchSubjectFile(projectCode, subjectCode);
+            txtSubjectCode.Text = subjectCode;
+            ProjectCode = projectCode;
+            SearchSubjectFile(projectCode, txtSubjectCode.Text.Trim());
         }
         private void SearchSubjectFile(string projectCode, string subjectCode)
         {
@@ -185,6 +187,18 @@ namespace XHX.View
             }
             SearchSubjectFile(projectCode, subjectCode);
            
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            SearchSubjectFile(ProjectCode, txtSubjectCode.Text.Trim());
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            if (grcShopFile.DataSource != null)
+                //CommonHandler.ExcelExport(grvShopScore);
+                CommonHandler.ExcelExportByExporter(grvShopFile);
         } 
     }
 }
