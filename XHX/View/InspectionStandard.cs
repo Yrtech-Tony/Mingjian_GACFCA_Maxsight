@@ -36,9 +36,10 @@ namespace XHX.View
             grcInspectionStandard.DataSource = new List<InspectionStandardDto>();
             selection = new GridCheckMarksSelection(grvInpectionStandard);
             selection.CheckMarkColumn.VisibleIndex = 0;
-            this.projectCode = projectCode;
-            this.subjectCode = subjectCode;
-            SearchProject(projectCode, subjectCode);
+            this.ProjectCode = projectCode;
+            this.SubjectCode = subjectCode;
+            txtSubjectCode.Text = subjectCode;
+            SearchProject(projectCode, txtSubjectCode.Text.Trim());
         }
         private void SearchProject(string projectCode,string subjectCode)
         {
@@ -194,6 +195,18 @@ namespace XHX.View
             }
             CommonHandler.ShowMessage(MessageType.Information, "生成完毕");
 
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            SearchProject(ProjectCode, txtSubjectCode.Text.Trim());
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            if (grcInspectionStandard.DataSource != null)
+                //CommonHandler.ExcelExport(grvShopScore);
+                CommonHandler.ExcelExportByExporter(grvInpectionStandard);
         }
     }
 }

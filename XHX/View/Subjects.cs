@@ -51,7 +51,7 @@ namespace XHX.View
         public Subjects()
         {
             InitializeComponent();
-            
+
             dataHandler = new XtraGridDataHandler<ProjectDto>(grvProject);
             dataHandlerChapter = new XtraGridDataHandler<ChapterDto>(grvCharter);
             dataHandlerSubject = new XtraGridDataHandler<SubjectDto>(grvSubject);
@@ -126,19 +126,19 @@ namespace XHX.View
             examType1.ExamTypeCode = "";
             examType1.ExamTypeName = "全部";
             list1.Add(examType1);
-           
+
             examType2.ExamTypeCode = "A";
             examType2.ExamTypeName = "A卷";
             list1.Add(examType2);
-           
+
             examType3.ExamTypeCode = "B";
             examType3.ExamTypeName = "B卷";
             list1.Add(examType3);
-            
+
             examType4.ExamTypeCode = "E";
             examType4.ExamTypeName = "E卷";
             list1.Add(examType4);
-           
+
             examType5.ExamTypeCode = "D";
             examType5.ExamTypeName = "D卷";
             list1.Add(examType5);
@@ -314,7 +314,7 @@ namespace XHX.View
                     {
                         subject.AddErrorChk = Convert.ToBoolean(ds.Tables[0].Rows[i]["AddErrorChk"]);
                     }
-                    
+
                     subjectList.Add(subject);
                 }
                 grcSubject.DataSource = subjectList;
@@ -435,7 +435,7 @@ namespace XHX.View
                     webService.SaveSubject(subject.StatusType, subject.ProjectCode, subject.SubjectCode, subject.Implementation,
                                            subject.CheckPoint, subject.Desc, subject.AdditionalDesc, subject.InspectionDesc,
                                            subject.InspectionNeedFile, subject.Remark, subject.OrderNO, subject.LinkCode, subject.FullScore,
-                                           subject.ScoreCheck, subject.SubjectTypeCode, subject.SubjectTypeCodeExam, subject.SubjectDelChk, subject.AddErrorChk,subject.Weight);
+                                           subject.ScoreCheck, subject.SubjectTypeCode, subject.SubjectTypeCodeExam, subject.SubjectDelChk, subject.AddErrorChk, subject.Weight);
                 }
             }
             SearchSubject();
@@ -612,7 +612,7 @@ namespace XHX.View
                 foreach (LinkDto link in linkList)
                 {
                     webService.SaveLink(CommonHandler.GetComboBoxSelectedValue(cboProject).ToString(),
-                    link.CharterCode, link.LinkCode, link.LinkName, link.LinkContent, link.InUserID,link.StatusType);
+                    link.CharterCode, link.LinkCode, link.LinkName, link.LinkContent, link.InUserID, link.StatusType);
                 }
             }
             SearchLink();
@@ -879,7 +879,7 @@ namespace XHX.View
                 foreach (ChapterDto chapter in chapterlist)
                 {
 
-                    webService.SaveChapter(chapter.ProjectCode, chapter.CharterCode, chapter.CharterName, chapter.CharterContent, chapter.OrderNo, chapter.InUserID, chapter.Weight,chapter.StatusType);
+                    webService.SaveChapter(chapter.ProjectCode, chapter.CharterCode, chapter.CharterName, chapter.CharterContent, chapter.OrderNo, chapter.InUserID, chapter.Weight, chapter.StatusType);
                 }
             }
             SearchChapter();
@@ -894,7 +894,7 @@ namespace XHX.View
             {
                 if (string.IsNullOrEmpty(textBox1.Text))
                 {
-                    CommonHandler.ShowMessage(MessageType.Information,"请输入期号");
+                    CommonHandler.ShowMessage(MessageType.Information, "请输入期号");
                     return;
                 }
                 webService.CopyLastData(textBox2.Text.Replace(" ", "").Trim(), textBox1.Text.Replace(" ", "").Trim());
@@ -953,7 +953,7 @@ namespace XHX.View
             }
             foreach (LinkDto subject in subjectList)
             {
-                DataSet dsInstand = webService.SearchSubject(CommonHandler.GetComboBoxSelectedValue(cboProject).ToString(), subject.CharterCode,subject.LinkCode,"");
+                DataSet dsInstand = webService.SearchSubject(CommonHandler.GetComboBoxSelectedValue(cboProject).ToString(), subject.CharterCode, subject.LinkCode, "");
                 if (dsInstand.Tables[0].Rows.Count > 0)
                 {
                     CommonHandler.ShowMessage(MessageType.Information, "请先删除执行体系");
@@ -978,22 +978,84 @@ namespace XHX.View
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             Workbook workbook = msExcelUtil.OpenExcelByMSExcel(btnModule.Text);
-            Worksheet worksheet_FengMian = workbook.Worksheets["Link"] as Worksheet;
             Worksheet worksheet_Subjects = workbook.Worksheets["Subjects"] as Worksheet;
-
-            for (int i = 2; i < 146; i++)
+            // 导入体系信息
+            for (int i = 2; i < 10000; i++)
             {
-                string subjectCode = msExcelUtil.GetCellValue(worksheet_Subjects, "A", i);
-                if (!string.IsNullOrEmpty(subjectCode))
-                {
-                    string linkCode = msExcelUtil.GetCellValue(worksheet_Subjects, "B", i);
-                    string checkItem = msExcelUtil.GetCellValue(worksheet_Subjects, "C", i);
-                    string standard = msExcelUtil.GetCellValue(worksheet_Subjects, "D", i);
-                    decimal weight = Convert.ToDecimal(msExcelUtil.GetCellValue(worksheet_Subjects, "E", i));
-                    int orderNo = Convert.ToInt32(msExcelUtil.GetCellValue(worksheet_Subjects, "F", i));
-                    webService.Area_SubjectSave("201701", "0", checkItem, standard, orderNo, weight, linkCode, "sysadmin", subjectCode);
+
+                string projectCode = msExcelUtil.GetCellValue(worksheet_Subjects, "A", i);
+                if (string.IsNullOrEmpty(projectCode)) {
+                    break;
+                
                 }
+                else
+                {
+                    string subjectCode = msExcelUtil.GetCellValue(worksheet_Subjects, "B", i);
+                    string linkCode = msExcelUtil.GetCellValue(worksheet_Subjects, "C", i);
+                    string orderNo = msExcelUtil.GetCellValue(worksheet_Subjects, "D", i);
+                    string fullScore = msExcelUtil.GetCellValue(worksheet_Subjects, "E", i);
+                    string Implementation = msExcelUtil.GetCellValue(worksheet_Subjects, "F", i);
+                    string checkPoint= msExcelUtil.GetCellValue(worksheet_Subjects, "G", i);
+                    string subjectTypeCode= msExcelUtil.GetCellValue(worksheet_Subjects, "H", i);
+                    string SubjectTypeCodeExam= msExcelUtil.GetCellValue(worksheet_Subjects, "I", i);
+                    string InspectionDesc= msExcelUtil.GetCellValue(worksheet_Subjects, "J", i);
+                    string Desc= msExcelUtil.GetCellValue(worksheet_Subjects, "K", i);
+                    string AdditionalDesc= msExcelUtil.GetCellValue(worksheet_Subjects, "L", i);
+                    string Remark= msExcelUtil.GetCellValue(worksheet_Subjects, "M", i);
+                    string ScoreCheck= msExcelUtil.GetCellValue(worksheet_Subjects, "N", i);
+                    string AddErrorChk= msExcelUtil.GetCellValue(worksheet_Subjects, "O", i);
+                    string SubjectDelChk= msExcelUtil.GetCellValue(worksheet_Subjects, "P", i);
+                    string Weight= msExcelUtil.GetCellValue(worksheet_Subjects, "Q", i);
+                    webService.SaveSubject('I', projectCode, subjectCode, Implementation, checkPoint, Desc, AdditionalDesc, InspectionDesc, "", Remark, Convert.ToInt32(orderNo), linkCode, Convert.ToDecimal(fullScore),
+                        Convert.ToBoolean(Convert.ToInt32(ScoreCheck)), subjectTypeCode, SubjectTypeCodeExam, Convert.ToBoolean(Convert.ToInt32(SubjectDelChk)), Convert.ToBoolean(Convert.ToInt32(AddErrorChk)), Convert.ToDecimal(Weight));
+                }
+
             }
+            // 导入标准照片
+
+            Worksheet worksheet_FileAndPicture = workbook.Worksheets["FileAndPicture"] as Worksheet;
+
+            for (int i = 2; i < 100000; i++)
+            {
+
+                string projectCode = msExcelUtil.GetCellValue(worksheet_FileAndPicture, "A", i);
+                if (string.IsNullOrEmpty(projectCode))
+                {
+                    break;
+
+                }
+                else
+                {
+                    string subjectCode = msExcelUtil.GetCellValue(worksheet_FileAndPicture, "B", i);
+                    string seqNO = msExcelUtil.GetCellValue(worksheet_FileAndPicture, "C", i);
+                    string fileName = msExcelUtil.GetCellValue(worksheet_FileAndPicture, "D", i);
+                    webService.SaveFileAndPicture('I',projectCode,subjectCode,Convert.ToInt32(seqNO),fileName,"01");
+                }
+
+            }
+
+            // 
+            Worksheet worksheet_Inspection = workbook.Worksheets["InspectionStandard"] as Worksheet;
+
+            for (int i = 2; i < 100000; i++)
+            {
+
+                string projectCode = msExcelUtil.GetCellValue(worksheet_Inspection, "A", i);
+                if (string.IsNullOrEmpty(projectCode))
+                {
+                    break;
+
+                }
+                else
+                {
+                    string subjectCode = msExcelUtil.GetCellValue(worksheet_Inspection, "B", i);
+                    string seqNO = msExcelUtil.GetCellValue(worksheet_Inspection, "C", i);
+                    string fileName = msExcelUtil.GetCellValue(worksheet_Inspection, "D", i);
+                    webService.SaveInspectionStandard(projectCode, subjectCode, Convert.ToInt32(seqNO),fileName,this.UserInfoDto.UserID,'I');
+                }
+
+            }
+
             CommonHandler.ShowMessage(MessageType.Information, "上传完毕");
         }
 
@@ -1004,7 +1066,7 @@ namespace XHX.View
                 CommonHandler.ExcelExportByExporter(grvSubject);
         }
 
-        
+
 
     }
 }

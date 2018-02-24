@@ -1467,7 +1467,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.simpleButton2.Location = new System.Drawing.Point(890, 10);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton2.Name = "simpleButton2";

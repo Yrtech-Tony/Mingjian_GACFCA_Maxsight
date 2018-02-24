@@ -39,6 +39,9 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnDel = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtSubjectCode = new System.Windows.Forms.TextBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddRow = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grcShopFile)).BeginInit();
@@ -64,7 +67,7 @@
             this.grcShopFile.Name = "grcShopFile";
             this.grcShopFile.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.comFileType});
-            this.grcShopFile.Size = new System.Drawing.Size(588, 517);
+            this.grcShopFile.Size = new System.Drawing.Size(687, 558);
             this.grcShopFile.TabIndex = 0;
             this.grcShopFile.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvShopFile});
@@ -83,9 +86,13 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "gridColumn2";
+            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.Caption = "体系号";
             this.gridColumn2.FieldName = "SubjectCode";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
             // 
             // gcCode
             // 
@@ -98,7 +105,7 @@
             this.gcCode.Name = "gcCode";
             this.gcCode.OptionsColumn.AllowEdit = false;
             this.gcCode.Visible = true;
-            this.gcCode.VisibleIndex = 0;
+            this.gcCode.VisibleIndex = 1;
             // 
             // gridColumn4
             // 
@@ -108,7 +115,7 @@
             this.gridColumn4.FieldName = "FileName";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 1;
+            this.gridColumn4.VisibleIndex = 2;
             // 
             // gridColumn3
             // 
@@ -119,7 +126,7 @@
             this.gridColumn3.FieldName = "FileType";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 3;
             // 
             // comFileType
             // 
@@ -132,25 +139,28 @@
             // 
             this.panelControl2.Controls.Add(this.grcShopFile);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 45);
+            this.panelControl2.Location = new System.Drawing.Point(0, 48);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panelControl2.Size = new System.Drawing.Size(592, 521);
+            this.panelControl2.Size = new System.Drawing.Size(691, 562);
             this.panelControl2.TabIndex = 12;
             // 
             // btnDel
             // 
             this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnDel.Location = new System.Drawing.Point(431, 15);
+            this.btnDel.Location = new System.Drawing.Point(419, 16);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(75, 25);
+            this.btnDel.Size = new System.Drawing.Size(87, 27);
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "删除行";
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.simpleButton2);
+            this.panelControl1.Controls.Add(this.txtSubjectCode);
+            this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Controls.Add(this.btnDel);
             this.panelControl1.Controls.Add(this.btnSave);
             this.panelControl1.Controls.Add(this.btnAddRow);
@@ -159,15 +169,42 @@
             this.panelControl1.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panelControl1.Size = new System.Drawing.Size(592, 45);
+            this.panelControl1.Size = new System.Drawing.Size(691, 48);
             this.panelControl1.TabIndex = 11;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.simpleButton2.Location = new System.Drawing.Point(601, 16);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(87, 27);
+            this.simpleButton2.TabIndex = 7;
+            this.simpleButton2.Text = "Excel下载";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // txtSubjectCode
+            // 
+            this.txtSubjectCode.Location = new System.Drawing.Point(125, 17);
+            this.txtSubjectCode.Name = "txtSubjectCode";
+            this.txtSubjectCode.Size = new System.Drawing.Size(100, 22);
+            this.txtSubjectCode.TabIndex = 6;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.simpleButton1.Location = new System.Drawing.Point(231, 16);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(87, 27);
+            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.Text = "查询";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSave.Location = new System.Drawing.Point(512, 15);
+            this.btnSave.Location = new System.Drawing.Point(511, 16);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 25);
+            this.btnSave.Size = new System.Drawing.Size(87, 27);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "保存";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -175,18 +212,18 @@
             // btnAddRow
             // 
             this.btnAddRow.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAddRow.Location = new System.Drawing.Point(350, 15);
+            this.btnAddRow.Location = new System.Drawing.Point(324, 16);
             this.btnAddRow.Name = "btnAddRow";
-            this.btnAddRow.Size = new System.Drawing.Size(75, 25);
+            this.btnAddRow.Size = new System.Drawing.Size(87, 27);
             this.btnAddRow.TabIndex = 0;
             this.btnAddRow.Text = "添加行";
             this.btnAddRow.Click += new System.EventHandler(this.btnAddRow_Click);
             // 
             // SubjectFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 566);
+            this.ClientSize = new System.Drawing.Size(691, 610);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "SubjectFile";
@@ -198,6 +235,7 @@
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -217,5 +255,8 @@
         private DevExpress.XtraEditors.SimpleButton btnAddRow;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox comFileType;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.TextBox txtSubjectCode;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }
