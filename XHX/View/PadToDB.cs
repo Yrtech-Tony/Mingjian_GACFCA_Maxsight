@@ -87,13 +87,13 @@ namespace XHX.View
             //}
             if (txtShopName.Text == "")
             {
-                CommonHandler.ShowMessage(MessageType.Information, "ÇëÑ¡Ôñ\"¾­ÏúÉÌ\"");
+                CommonHandler.ShowMessage(MessageType.Information, "请选择经销商");
                 txtShopName.Focus();
                 return;
             }
             if (btnDataPath.Text == "")
             {
-                CommonHandler.ShowMessage(MessageType.Information, "ÇëÑ¡Ôñ\"Êý¾ÝÂ·¾¶\"");
+                CommonHandler.ShowMessage(MessageType.Information, "请选择路径");
                 btnDataPath.Focus();
                 return;
             }
@@ -115,7 +115,7 @@ namespace XHX.View
             }
             if (!isExistDBFile)
             {
-                CommonHandler.ShowMessage(MessageType.Information, "Â·¾¶ÖÐ²»´æÔÚÊý¾Ý¿âÎÄ¼þ'writeable.db'");
+                CommonHandler.ShowMessage(MessageType.Information, "路径中不存在数据库文件");
                 return;
             }
             #endregion
@@ -222,7 +222,7 @@ namespace XHX.View
             else
             {
 
-                CommonHandler.ShowMessage(MessageType.Information, "ÒÑ¾­Ìá½»¸´ÉóÁË£¬·ÖÊý²»»áÉÏ´«Ö»»áÉÏ´«ÕÕÆ¬ÐÅÏ¢");
+                CommonHandler.ShowMessage(MessageType.Information, "分数不会上传只会上传照片信息");
             }
             #region ÉÏ´«Í¼Æ¬ÎÄ¼þ
             {
@@ -250,7 +250,7 @@ namespace XHX.View
                         }
                     }
                 }
-                CommonHandler.ShowMessage(MessageType.Information, "Êý¾ÝÉÏ´«Íê±Ï¡£");
+                CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕");
                 //TimeSpan ts = DateTime.Now - st;
                 //CommonHandler.ShowMessage(MessageType.Information,ts.ToString());
             }
@@ -337,11 +337,11 @@ namespace XHX.View
             }
             if (string.IsNullOrEmpty(fail))
             {
-                // CommonHandler.ShowMessage(MessageType.Information, "Êý¾ÝÉÏ´«Íê±Ï¡£");
+                 //CommonHandler.ShowMessage(MessageType.Information, "上传完毕");
             }
             else
             {
-                CommonHandler.ShowMessage(MessageType.Information, "Êý¾ÝÉÏ´«Íê±Ï¡£" + fail + "Î´ÉÏ´«³É¹¦");
+                CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕。" + fail + "未上传成功");
             }
             pbrProgressForUpload.Value = 0;
         }
@@ -363,7 +363,7 @@ namespace XHX.View
         {
             if (tbnSQLitePath.Text == "")
             {
-                CommonHandler.ShowMessage(MessageType.Information, "ÇëÑ¡Ôñ\"Êý¾ÝÂ·¾¶\"");
+                CommonHandler.ShowMessage(MessageType.Information, "请选择路径");
                 tbnSQLitePath.Focus();
                 return;
             }
@@ -385,12 +385,12 @@ namespace XHX.View
                         if (success)
                         {
                             File.Copy(sqlitePath, Path.Combine(Path.GetDirectoryName(sqlitePath), "writeable.db"), true);
-                            CommonHandler.ShowMessage(MessageType.Information, "ÏÂÔØ³É¹¦");
+                            CommonHandler.ShowMessage(MessageType.Information, "下载成功¦");
                             pbrProgress.Value = 0;
                         }
                         else
                         {
-                            CommonHandler.ShowMessage(MessageType.Information, "ÏÂÔØÊ§°Ü\r\n" + msg);
+                            CommonHandler.ShowMessage(MessageType.Information, "下载失败 \r\n" + msg);
                             pbrProgress.Value = 0;
                         }
                     }
@@ -502,7 +502,7 @@ namespace XHX.View
 
             //CommonHandler.ShowMessage(MessageType.Information, "ÉÏ´«Íê±Ï");
 
-            DirectoryInfo shopDir = new DirectoryInfo(@"C:\Users\ElandEmp\Desktop\XHX_YIQI_Data\XHX_YIQI_Data\201503¹ãÆû·áÌïÖØÇìË·ÁúÁúÌÚµê");
+            DirectoryInfo shopDir = new DirectoryInfo(@"C:\Users\ElandEmp\Desktop\XHX_YIQI_Data\XHX_YIQI_Data\201503广汽丰田重庆朔龙龙腾店");
             double shopDirSize = 0;
             foreach (DirectoryInfo dir in shopDir.GetDirectories())
             {
@@ -554,11 +554,11 @@ namespace XHX.View
             }
             if (string.IsNullOrEmpty(fail))
             {
-                CommonHandler.ShowMessage(MessageType.Information, "Êý¾ÝÉÏ´«Íê±Ï¡£");
+                CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕");
             }
             else
             {
-                CommonHandler.ShowMessage(MessageType.Information, "Êý¾ÝÉÏ´«Íê±Ï¡£" + fail + "Î´ÉÏ´«³É¹¦");
+                CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕。" + fail + "未上传成功");
             }
             //pbrProgressForUpload.Value = 0;
             TimeSpan ts = (DateTime.Now - dt);
@@ -600,11 +600,11 @@ namespace XHX.View
             if (this.UserInfoDto.RoleType == "S")
             {
                 service.CopyDataToSqlLite(CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString());
-                CommonHandler.ShowMessage(MessageType.Information, "¸üÐÂÍê±Ï");
+                CommonHandler.ShowMessage(MessageType.Information, "¸更新完毕");
             }
             else
             {
-                CommonHandler.ShowMessage(MessageType.Information, "²»ÊÇ¹ÜÀíÔ±È¨ÏÞ");
+                CommonHandler.ShowMessage(MessageType.Information, "不是管理员权限");
             }
         }
 
