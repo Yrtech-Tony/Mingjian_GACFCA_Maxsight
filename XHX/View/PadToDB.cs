@@ -385,12 +385,12 @@ namespace XHX.View
                         if (success)
                         {
                             File.Copy(sqlitePath, Path.Combine(Path.GetDirectoryName(sqlitePath), "writeable.db"), true);
-                            CommonHandler.ShowMessage(MessageType.Information, "下载成功¦");
+                            CommonHandler.ShowMessage(MessageType.Information, "下载成功¹¦");
                             pbrProgress.Value = 0;
                         }
                         else
                         {
-                            CommonHandler.ShowMessage(MessageType.Information, "下载失败 \r\n" + msg);
+                            CommonHandler.ShowMessage(MessageType.Information, "下载失败\r\n" + msg);
                             pbrProgress.Value = 0;
                         }
                     }
@@ -435,7 +435,7 @@ namespace XHX.View
         {
             if (tbnSQLitePathForUpdate.Text == "")
             {
-                CommonHandler.ShowMessage(MessageType.Information, "ÇëÑ¡Ôñ\"Êý¾ÝÂ·¾¶\"");
+                CommonHandler.ShowMessage(MessageType.Information, "请选择路径");
                 tbnSQLitePathForUpdate.Focus();
                 return;
             }
@@ -456,12 +456,12 @@ namespace XHX.View
 
                         if (success)
                         {
-                            CommonHandler.ShowMessage(MessageType.Information, "ÏÂÔØ³É¹¦");
+                            CommonHandler.ShowMessage(MessageType.Information, "上传完毕");
                             pbrProgressForUpdate.Value = 0;
                         }
                         else
                         {
-                            CommonHandler.ShowMessage(MessageType.Information, "ÏÂÔØÊ§°Ü\r\n" + msg);
+                            CommonHandler.ShowMessage(MessageType.Information, "上传失败\r\n" + msg);
                             pbrProgressForUpdate.Value = 0;
                         }
                     }
@@ -554,11 +554,11 @@ namespace XHX.View
             }
             if (string.IsNullOrEmpty(fail))
             {
-                CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕");
+                CommonHandler.ShowMessage(MessageType.Information, "上传完毕");
             }
             else
             {
-                CommonHandler.ShowMessage(MessageType.Information, "数据上传完毕。" + fail + "未上传成功");
+                CommonHandler.ShowMessage(MessageType.Information, "上传失败列表" + fail + "");
             }
             //pbrProgressForUpload.Value = 0;
             TimeSpan ts = (DateTime.Now - dt);
@@ -600,11 +600,11 @@ namespace XHX.View
             if (this.UserInfoDto.RoleType == "S")
             {
                 service.CopyDataToSqlLite(CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString());
-                CommonHandler.ShowMessage(MessageType.Information, "¸更新完毕");
+                CommonHandler.ShowMessage(MessageType.Information, "更新成功");
             }
             else
             {
-                CommonHandler.ShowMessage(MessageType.Information, "不是管理员权限");
+                CommonHandler.ShowMessage(MessageType.Information, "没有更新权限");
             }
         }
 
