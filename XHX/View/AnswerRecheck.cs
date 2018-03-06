@@ -687,19 +687,19 @@ namespace XHX.View
 
                 else if (buttonType == ButtonType.FirstReCheck)
                 {
-                    CommonHandler.ShowMessage(MessageType.Information, "硬件服务复查已经完毕，可以使用跳转功能来查看！");
+                    CommonHandler.ShowMessage(MessageType.Information, "流程演练复查已经完毕，可以使用跳转功能来查看！");
                     return false;
                 }
 
                 else if (buttonType == ButtonType.SecondReChek)
                 {
-                    CommonHandler.ShowMessage(MessageType.Information, "服务顾问接待流程复查已经完毕，可以使用跳转功能来查看！");
+                    CommonHandler.ShowMessage(MessageType.Information, "人员和单据复查已经完毕，可以使用跳转功能来查看！");
                     return false;
                 }
 
                 else if (buttonType == ButtonType.ThirdReCheck)
                 {
-                    CommonHandler.ShowMessage(MessageType.Information, "单据复查已经完毕，可以使用跳转功能来查看！");
+                    CommonHandler.ShowMessage(MessageType.Information, "硬件复查已经完毕，可以使用跳转功能来查看！");
                     return false;
                 }
 
