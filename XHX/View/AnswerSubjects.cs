@@ -1338,26 +1338,26 @@ namespace XHX.View
         {
             List<SubjectCheckDto> list = new List<SubjectCheckDto>();
             string strList = "";
-
-            DataSet ds = service.GetNotAnswerSubject(ProjectCode_Golbal, ShopCode_Golbal);
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-                {
-                    if (ds.Tables[0].Rows[i]["ErrorType"].ToString() == "1")
-                    {
-                        SubjectCheckDto subject = new SubjectCheckDto();
-                        subject.SubjectCode = ds.Tables[0].Rows[i]["SubjectCode"].ToString();
-                        strList += subject.SubjectCode + ";";
-                        list.Add(subject);
-                    }
-                }
-            }
-            if (list.Count > 0)
-            {
-                CommonHandler.ShowMessage(MessageType.Information, "存在没有打分的题" + strList);
-                return;
-            }
+            // 客户要求暂时屏蔽
+            //DataSet ds = service.GetNotAnswerSubject(ProjectCode_Golbal, ShopCode_Golbal);
+            //if (ds.Tables[0].Rows.Count > 0)
+            //{
+            //    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            //    {
+            //        if (ds.Tables[0].Rows[i]["ErrorType"].ToString() == "1")
+            //        {
+            //            SubjectCheckDto subject = new SubjectCheckDto();
+            //            subject.SubjectCode = ds.Tables[0].Rows[i]["SubjectCode"].ToString();
+            //            strList += subject.SubjectCode + ";";
+            //            list.Add(subject);
+            //        }
+            //    }
+            //}
+            //if (list.Count > 0)
+            //{
+            //    CommonHandler.ShowMessage(MessageType.Information, "存在没有打分的题" + strList);
+            //    return;
+            //}
             if (CommonHandler.ShowMessage(MessageType.Confirm, "确定要申请复审吗？") == DialogResult.Yes)
             {
                 service.SaveRecheckStatus(ProjectCode_Golbal, ShopCode_Golbal, "S0", this.UserInfoDto.UserID);
