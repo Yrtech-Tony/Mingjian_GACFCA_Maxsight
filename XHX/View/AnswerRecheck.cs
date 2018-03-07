@@ -693,13 +693,13 @@ namespace XHX.View
 
                 else if (buttonType == ButtonType.SecondReChek)
                 {
-                    CommonHandler.ShowMessage(MessageType.Information, "人员和单据接待流程复查已经完毕，可以使用跳转功能来查看！");
+                    CommonHandler.ShowMessage(MessageType.Information, "人员和单据复查已经完毕，可以使用跳转功能来查看！");
                     return false;
                 }
 
                 else if (buttonType == ButtonType.ThirdReCheck)
                 {
-                    CommonHandler.ShowMessage(MessageType.Information, "硬件已经完毕，可以使用跳转功能来查看！");
+                    CommonHandler.ShowMessage(MessageType.Information, "硬件复查已经完毕，可以使用跳转功能来查看！");
                     return false;
                 }
 
