@@ -10,5 +10,6 @@ namespace XHX.DTO
         public string ProjectCode { get; set; }
         public string ShopCode { get; set; }
         public string StatusCode { get; set; }
+        
     }
 }

@@ -687,19 +687,19 @@ namespace XHX.View
 
                 else if (buttonType == ButtonType.FirstReCheck)
                 {
-                    CommonHandler.ShowMessage(MessageType.Information, "硬件服务复查已经完毕，可以使用跳转功能来查看！");
+                    CommonHandler.ShowMessage(MessageType.Information, "流程演练复查已经完毕，可以使用跳转功能来查看！");
                     return false;
                 }
 
                 else if (buttonType == ButtonType.SecondReChek)
                 {
-                    CommonHandler.ShowMessage(MessageType.Information, "服务顾问接待流程复查已经完毕，可以使用跳转功能来查看！");
+                    CommonHandler.ShowMessage(MessageType.Information, "人员和单据接待流程复查已经完毕，可以使用跳转功能来查看！");
                     return false;
                 }
 
                 else if (buttonType == ButtonType.ThirdReCheck)
                 {
-                    CommonHandler.ShowMessage(MessageType.Information, "单据复查已经完毕，可以使用跳转功能来查看！");
+                    CommonHandler.ShowMessage(MessageType.Information, "硬件已经完毕，可以使用跳转功能来查看！");
                     return false;
                 }
 
@@ -1281,7 +1281,7 @@ namespace XHX.View
                     service.RechekComplete(ProjectCode_Golbal, ShopCode_Golbal, "SB", this.UserInfoDto.UserID);
 
                 }
-                else if (MenumName == "硬件")
+                else if (MenumName == "硬件") 
                 {
                     service.RechekComplete(ProjectCode_Golbal, ShopCode_Golbal, "SC", this.UserInfoDto.UserID);
 
