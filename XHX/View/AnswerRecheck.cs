@@ -753,7 +753,8 @@ namespace XHX.View
             }
             txtSubjectCode.Text = subjectDto.SubjectCode;
             SubjectCode_Golbal = subjectDto.SubjectCode;
-            CommonHandler.SetComboBoxSelectedValue(cboExamType, subjectDto.SubjectTypeCodeExam.ToString());
+            // 这句代码感觉没有意义
+           // CommonHandler.SetComboBoxSelectedValue(cboExamType, subjectDto.SubjectTypeCodeExam.ToString()); 
             cboExamType.Properties.ReadOnly = true;
             OrderNO_Golbal = subjectDto.OrderNO;
 
