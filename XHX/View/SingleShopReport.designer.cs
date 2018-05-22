@@ -28,11 +28,13 @@
             this.grdShop = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cboProjects = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtSubjectCode = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnModule = new DevExpress.XtraEditors.ButtonEdit();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.tbnFilePath = new DevExpress.XtraEditors.ButtonEdit();
@@ -45,20 +47,19 @@
             this.gcShopName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cboAreaCode = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.chkUseChk = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.txtSubjectCode = new DevExpress.XtraEditors.TextEdit();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdShop)).BeginInit();
             this.grdShop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboProjects.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubjectCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModule.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbnFilePath.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcShop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboAreaCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkUseChk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSubjectCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grdShop
@@ -92,8 +93,19 @@
             this.cboProjects.Size = new System.Drawing.Size(100, 21);
             this.cboProjects.TabIndex = 12;
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(508, -15);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(129, 44);
+            this.simpleButton2.TabIndex = 91;
+            this.simpleButton2.Text = "不计分经销商设置";
+            this.simpleButton2.Visible = false;
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.checkBox1);
             this.groupControl2.Controls.Add(this.txtSubjectCode);
             this.groupControl2.Controls.Add(this.simpleButton4);
             this.groupControl2.Controls.Add(this.simpleButton3);
@@ -111,9 +123,25 @@
             this.groupControl2.Size = new System.Drawing.Size(982, 98);
             this.groupControl2.TabIndex = 92;
             // 
+            // txtSubjectCode
+            // 
+            this.txtSubjectCode.Location = new System.Drawing.Point(797, 71);
+            this.txtSubjectCode.Name = "txtSubjectCode";
+            this.txtSubjectCode.Size = new System.Drawing.Size(108, 21);
+            this.txtSubjectCode.TabIndex = 101;
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Location = new System.Drawing.Point(688, 49);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(102, 44);
+            this.simpleButton4.TabIndex = 100;
+            this.simpleButton4.Text = "下载标准照片";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(648, 49);
+            this.simpleButton3.Location = new System.Drawing.Point(582, 48);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(102, 44);
             this.simpleButton3.TabIndex = 94;
@@ -143,19 +171,9 @@
             this.btnModule.Visible = false;
             this.btnModule.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnModule_ButtonClick);
             // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(508, -15);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(129, 44);
-            this.simpleButton2.TabIndex = 91;
-            this.simpleButton2.Text = "不计分经销商设置";
-            this.simpleButton2.Visible = false;
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(582, 49);
+            this.simpleButton1.Location = new System.Drawing.Point(402, 49);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(60, 44);
             this.simpleButton1.TabIndex = 90;
@@ -187,7 +205,7 @@
             // 
             this.pbrProgress.Location = new System.Drawing.Point(64, 54);
             this.pbrProgress.Name = "pbrProgress";
-            this.pbrProgress.Size = new System.Drawing.Size(391, 23);
+            this.pbrProgress.Size = new System.Drawing.Size(332, 23);
             this.pbrProgress.TabIndex = 89;
             // 
             // labelControl5
@@ -273,21 +291,15 @@
             this.chkUseChk.AutoHeight = false;
             this.chkUseChk.Name = "chkUseChk";
             // 
-            // simpleButton4
+            // checkBox1
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(756, 49);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(102, 44);
-            this.simpleButton4.TabIndex = 100;
-            this.simpleButton4.Text = "下载标准照片";
-            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
-            // 
-            // txtSubjectCode
-            // 
-            this.txtSubjectCode.Location = new System.Drawing.Point(861, 56);
-            this.txtSubjectCode.Name = "txtSubjectCode";
-            this.txtSubjectCode.Size = new System.Drawing.Size(121, 21);
-            this.txtSubjectCode.TabIndex = 101;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(797, 54);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(72, 16);
+            this.checkBox1.TabIndex = 102;
+            this.checkBox1.Text = "按经销商";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // SingleShopReport
             // 
@@ -306,13 +318,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubjectCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModule.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbnFilePath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcShop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboAreaCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkUseChk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSubjectCode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,5 +353,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.TextEdit txtSubjectCode;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
