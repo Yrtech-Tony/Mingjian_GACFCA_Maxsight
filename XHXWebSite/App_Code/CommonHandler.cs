@@ -91,7 +91,9 @@ public class CommonHandler
         string ConnectionString = "Provider=sqloledb;Data Source=123.57.229.128;Initial Catalog=GACFCA;user id=sa;pwd=mxT1@mfb;timeout = 0";
         using (OleDbConnection conn = new OleDbConnection(ConnectionString))
         {
-            using (OleDbDataAdapter da = new OleDbDataAdapter(sql, conn))
+            OleDbCommand cmd = new OleDbCommand(sql, conn);
+            cmd.CommandTimeout = 300;
+            using (OleDbDataAdapter da = new OleDbDataAdapter(cmd))
             {
                 try
                 {

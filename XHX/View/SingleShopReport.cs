@@ -711,30 +711,48 @@ namespace XHX.View
                     _shopDtoList.Add(gridView1.GetRow(i) as ShopDto);
                 }
             }
-
             foreach (ShopDto shop in _shopDtoList)
             {
-                if (!Directory.Exists(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + shop.ShopName))
+                if (checkBox1.Checked)
                 {
-                    Directory.CreateDirectory(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + shop.ShopName);
+                    if (!Directory.Exists(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + shop.ShopName))
+                    {
+                        Directory.CreateDirectory(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + shop.ShopName);
+                    }
                 }
                 DataSet ds = service.SearchSubjectFile(CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString(), txtSubjectCode.Text);
-                // DataSet ds = service.SearchLossPicByShopCode(CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString(), shop.ShopCode);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                     {
-                        if (!Directory.Exists(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString()))
-                        {
-                            Directory.CreateDirectory(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString());
-                        }
                         string fileName = ds.Tables[0].Rows[i]["FileName"].ToString();
-                        byte[] image = service.SearchPicStream(CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + shop.ShopName, ds.Tables[0].Rows[i]["SubjectCode"].ToString(), fileName.Replace(".jpg", ""));
-                        if (image != null)
+                        if (checkBox1.Checked)
                         {
-                            MemoryStream buf = new MemoryStream(image);
-                            Image picimage = Image.FromStream(buf, true);
-                            picimage.Save(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + @"\" + shop.ShopCode+"_"+ds.Tables[0].Rows[i]["SubjectCode"].ToString() + "_" + fileName.Replace(".jpg", "") + ".jpg");
+                            if (!Directory.Exists(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + shop.ShopName + @"\" + ds.Tables[0].Rows[i]["SubjectCode"].ToString()))
+                            {
+                                Directory.CreateDirectory(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + shop.ShopName + @"\" + ds.Tables[0].Rows[i]["SubjectCode"].ToString());
+                            }
+                            byte[] image = service.SearchPicStream(CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + shop.ShopName, ds.Tables[0].Rows[i]["SubjectCode"].ToString(), fileName.Replace(".jpg", ""));
+                            if (image != null)
+                            {
+                                MemoryStream buf = new MemoryStream(image);
+                                Image picimage = Image.FromStream(buf, true);
+                                picimage.Save(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + shop.ShopName + @"\" + ds.Tables[0].Rows[i]["SubjectCode"].ToString() + @"\" +  fileName.Replace(".jpg", "") + ".jpg");
+                            }
+                        }
+                        else
+                        {
+                            if (!Directory.Exists(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString()))
+                            {
+                                Directory.CreateDirectory(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString());
+                            }
+                            byte[] image = service.SearchPicStream(CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + shop.ShopName, ds.Tables[0].Rows[i]["SubjectCode"].ToString(), fileName.Replace(".jpg", ""));
+                            if (image != null)
+                            {
+                                MemoryStream buf = new MemoryStream(image);
+                                Image picimage = Image.FromStream(buf, true);
+                                picimage.Save(tbnFilePath.Text + @"\" + CommonHandler.GetComboBoxSelectedValue(cboProjects).ToString() + @"\" + shop.ShopCode + "_" + ds.Tables[0].Rows[i]["SubjectCode"].ToString() + "_" + fileName.Replace(".jpg", "") + ".jpg");
+                            }
                         }
 
                     }
