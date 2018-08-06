@@ -72,6 +72,8 @@ namespace XHX.View
                     reCheckDtl.ShopName = Convert.ToString(ds.Tables[0].Rows[i]["ShopName"]);
                     reCheckDtl.PicError = Convert.ToString(ds.Tables[0].Rows[i]["PicError"]);
                     reCheckDtl.StanderdError = Convert.ToString(ds.Tables[0].Rows[i]["StanderdError"]);
+                    reCheckDtl.NeedCheckError = Convert.ToString(ds.Tables[0].Rows[i]["NeedCheckError"]);
+                    reCheckDtl.OtherError = Convert.ToString(ds.Tables[0].Rows[i]["OtherError"]);
                     reCheckDtlList.Add(reCheckDtl);
                 }
                 grcReCheckDtl.DataSource = reCheckDtlList;

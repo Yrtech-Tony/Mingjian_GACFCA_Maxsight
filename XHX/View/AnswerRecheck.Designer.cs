@@ -33,6 +33,7 @@
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkStandardError = new System.Windows.Forms.CheckBox();
             this.chkSystem = new System.Windows.Forms.CheckBox();
             this.chkPic = new System.Windows.Forms.CheckBox();
             this.chkDesc = new System.Windows.Forms.CheckBox();
@@ -120,7 +121,8 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnReCheckFinish = new DevExpress.XtraEditors.SimpleButton();
             this.btnRecheck = new DevExpress.XtraEditors.SimpleButton();
-            this.chkStandardError = new System.Windows.Forms.CheckBox();
+            this.chkNeedCheck = new System.Windows.Forms.CheckBox();
+            this.chkOther = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -241,6 +243,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chkNeedCheck);
+            this.panel1.Controls.Add(this.chkOther);
             this.panel1.Controls.Add(this.chkStandardError);
             this.panel1.Controls.Add(this.chkSystem);
             this.panel1.Controls.Add(this.chkPic);
@@ -256,10 +260,20 @@
             this.panel1.Size = new System.Drawing.Size(453, 166);
             this.panel1.TabIndex = 83;
             // 
+            // chkStandardError
+            // 
+            this.chkStandardError.AutoSize = true;
+            this.chkStandardError.Location = new System.Drawing.Point(166, 63);
+            this.chkStandardError.Name = "chkStandardError";
+            this.chkStandardError.Size = new System.Drawing.Size(96, 16);
+            this.chkStandardError.TabIndex = 90;
+            this.chkStandardError.Text = "检查结果错误";
+            this.chkStandardError.UseVisualStyleBackColor = true;
+            // 
             // chkSystem
             // 
             this.chkSystem.AutoSize = true;
-            this.chkSystem.Location = new System.Drawing.Point(286, 51);
+            this.chkSystem.Location = new System.Drawing.Point(286, 63);
             this.chkSystem.Name = "chkSystem";
             this.chkSystem.Size = new System.Drawing.Size(120, 16);
             this.chkSystem.TabIndex = 89;
@@ -308,9 +322,9 @@
             // txtRecheckContent
             // 
             this.txtRecheckContent.AllowDrop = true;
-            this.txtRecheckContent.Location = new System.Drawing.Point(72, 78);
+            this.txtRecheckContent.Location = new System.Drawing.Point(72, 99);
             this.txtRecheckContent.Name = "txtRecheckContent";
-            this.txtRecheckContent.Size = new System.Drawing.Size(378, 58);
+            this.txtRecheckContent.Size = new System.Drawing.Size(378, 37);
             this.txtRecheckContent.TabIndex = 84;
             // 
             // rdoNO
@@ -1098,15 +1112,25 @@
             this.btnRecheck.Text = "开始第X次复审";
             this.btnRecheck.Click += new System.EventHandler(this.btnAnswerStart_Click);
             // 
-            // chkStandardError
+            // chkNeedCheck
             // 
-            this.chkStandardError.AutoSize = true;
-            this.chkStandardError.Location = new System.Drawing.Point(166, 51);
-            this.chkStandardError.Name = "chkStandardError";
-            this.chkStandardError.Size = new System.Drawing.Size(96, 16);
-            this.chkStandardError.TabIndex = 90;
-            this.chkStandardError.Text = "检查结果错误";
-            this.chkStandardError.UseVisualStyleBackColor = true;
+            this.chkNeedCheck.AutoSize = true;
+            this.chkNeedCheck.Location = new System.Drawing.Point(166, 41);
+            this.chkNeedCheck.Name = "chkNeedCheck";
+            this.chkNeedCheck.Size = new System.Drawing.Size(60, 16);
+            this.chkNeedCheck.TabIndex = 92;
+            this.chkNeedCheck.Text = "需核实";
+            this.chkNeedCheck.UseVisualStyleBackColor = true;
+            // 
+            // chkOther
+            // 
+            this.chkOther.AutoSize = true;
+            this.chkOther.Location = new System.Drawing.Point(286, 41);
+            this.chkOther.Name = "chkOther";
+            this.chkOther.Size = new System.Drawing.Size(48, 16);
+            this.chkOther.TabIndex = 91;
+            this.chkOther.Text = "其他";
+            this.chkOther.UseVisualStyleBackColor = true;
             // 
             // AnswerRecheck
             // 
@@ -1268,5 +1292,7 @@
         private System.Windows.Forms.CheckBox chkDesc;
         private System.Windows.Forms.CheckBox chkSystem;
         private System.Windows.Forms.CheckBox chkStandardError;
+        private System.Windows.Forms.CheckBox chkNeedCheck;
+        private System.Windows.Forms.CheckBox chkOther;
     }
 }
