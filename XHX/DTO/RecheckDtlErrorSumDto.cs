@@ -14,5 +14,7 @@ namespace XHX.DTO
        public string DescError { get; set; }
        public string PicError { get; set; }
        public string StanderdError { get; set; }
+       public string NeedCheckError { get; set; }
+       public string OtherError { get; set; }
     }
 }

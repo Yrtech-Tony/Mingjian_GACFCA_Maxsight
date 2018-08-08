@@ -268,6 +268,16 @@ namespace XHX.View
                 passReCheck = "1";
             else
                 passReCheck = "0";
+            if (passReCheck = "0" &&
+                !chkScoreError.Checked &&
+                !chkDesc.Checked &&
+                !chkPic.Checked &&
+                !chkStandardError.Checked &&
+                !chkSystem.Checked)
+            {
+                CommonHandler.ShowMessage(MessageType.Information, "未通过复审至少需要选择一个理由");
+                return;
+            }
             decimal? score;
             if (chkNotinvolved.Checked)
             {
@@ -285,6 +295,8 @@ namespace XHX.View
             string DescError = "";
             string PicError = "";
             string StandardEorror = "";
+            string NeedCheckError = "";
+            string OtherError = "";
             if (chkScoreError.Checked)
             {
                 ScoreError = "EA";
@@ -300,6 +312,14 @@ namespace XHX.View
             if (chkStandardError.Checked)
             {
                 StandardEorror = "ED";
+            }
+            if (chkNeedCheck.Checked)
+            {
+                NeedCheckError = "EE";
+            }
+            if (chkOther.Checked)
+            {
+                OtherError = "EF";
             }
             if (ScoreError == "")
             {
@@ -333,6 +353,23 @@ namespace XHX.View
             {
                 service.SaveRecheckDtl(ProjectCode_Golbal, SubjectCode_Golbal, ShopCode_Golbal, reCheckTypeCode, this.UserInfoDto.UserID, StandardEorror);
             }
+            if (NeedCheckError == "")
+            {
+                service.DeleteRecheckDtl(ProjectCode_Golbal, SubjectCode_Golbal, ShopCode_Golbal, reCheckTypeCode, "EE");
+            }
+            else
+            {
+                service.SaveRecheckDtl(ProjectCode_Golbal, SubjectCode_Golbal, ShopCode_Golbal, reCheckTypeCode, this.UserInfoDto.UserID, NeedCheckError);
+            }
+            if (OtherError == "")
+            {
+                service.DeleteRecheckDtl(ProjectCode_Golbal, SubjectCode_Golbal, ShopCode_Golbal, reCheckTypeCode, "EF");
+            }
+            else
+            {
+                service.SaveRecheckDtl(ProjectCode_Golbal, SubjectCode_Golbal, ShopCode_Golbal, reCheckTypeCode, this.UserInfoDto.UserID, OtherError);
+            }
+
             //查询下一个问卷信息并显示
             DataSet ds = service.SearchNextSubject(ProjectCode_Golbal, ShopCode_Golbal,
                                                     OrderNO_Golbal, CheckType, CommonHandler.GetComboBoxSelectedValue(cboExamType).ToString());
@@ -884,6 +921,22 @@ namespace XHX.View
                     {
                         chkStandardError.Checked = false;
                     }
+                    if (reCheckDtl.ErrorType == "EE")
+                    {
+                        chkNeedCheck.Checked = true;
+                    }
+                    else
+                    {
+                        chkNeedCheck.Checked = false;
+                    }
+                    if (reCheckDtl.ErrorType == "EF")
+                    {
+                        chkOther.Checked = true;
+                    }
+                    else
+                    {
+                        chkOther.Checked = false;
+                    }
                     reCheckDtlList.Add(reCheckDtl);
                 }
             }
@@ -893,6 +946,8 @@ namespace XHX.View
                 chkDesc.Checked = false;
                 chkPic.Checked = false;
                 chkStandardError.Checked = false;
+                chkNeedCheck.Checked = false;
+                chkOther.Checked = false;
             }
         }
         public enum ButtonType
