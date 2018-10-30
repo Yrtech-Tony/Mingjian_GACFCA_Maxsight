@@ -16,5 +16,6 @@ namespace XHX.DTO
        public string RecheckProcess { get; set; }
        public string ReCheckFinish { get; set; }
        public string ModifyFinish { get; set; }
+       public bool SpecialCaseChk { get; set; }
     }
 }

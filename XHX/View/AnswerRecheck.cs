@@ -268,16 +268,19 @@ namespace XHX.View
                 passReCheck = "1";
             else
                 passReCheck = "0";
-            //if (passReCheck == "0" &&
-            //    !chkScoreError.Checked &&
-            //    !chkDesc.Checked &&
-            //    !chkPic.Checked &&
-            //    !chkStandardError.Checked &&
-            //    !chkSystem.Checked)
-            //{
-            //    CommonHandler.ShowMessage(MessageType.Information, "未通过复审至少需要选择一个理由");
-            //    return;
-            //}
+            if (passReCheck == "0" &&
+                !chkScoreError.Checked &&
+                !chkDesc.Checked &&
+                !chkPic.Checked &&
+                !chkStandardError.Checked &&
+                !chkSystem.Checked&&
+                !chkNeedCheck.Checked&&
+                !chkOther.Checked
+                )
+            {
+                CommonHandler.ShowMessage(MessageType.Information, "未通过复审至少需要选择一个理由");
+                return;
+            }
             decimal? score;
             if (chkNotinvolved.Checked)
             {
@@ -1337,7 +1340,7 @@ namespace XHX.View
                     service.RechekComplete(ProjectCode_Golbal, ShopCode_Golbal, "SB", this.UserInfoDto.UserID);
 
                 }
-                else if (MenumName == "硬件")
+                else if (MenumName == "硬件") 
                 {
                     service.RechekComplete(ProjectCode_Golbal, ShopCode_Golbal, "SC", this.UserInfoDto.UserID);
 
