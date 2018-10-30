@@ -137,6 +137,7 @@ namespace XHX.Common
             }
         }
 
+
         public void DeleteObject(String bucketName, string key)
         {
             ossClient.DeleteObject(bucketName, key);

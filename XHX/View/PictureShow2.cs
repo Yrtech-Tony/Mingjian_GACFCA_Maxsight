@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using XHX;
 using System.IO;
+using XHX.Common;
 
 namespace XHX.View
 {
@@ -31,7 +32,7 @@ namespace XHX.View
         {
             this.LookAndFeel.SetSkinStyle(CommonHandler.Skin_Name);
             Image image = null ;
-            byte[] b = service.SearchAnswerDtl2Pic(picName, shopName,subjectCode,"","");
+            byte[] b = SearchAnswerDtl2Pic(picName, shopName,subjectCode,"","");
             //查看服务器是否有对应的图片，如果没有的话读取本地的图片
             if (b == null)
             {
@@ -112,6 +113,97 @@ namespace XHX.View
         private void PictureShow2_Shown(object sender, EventArgs e)
         {
             this.kpImageViewer1.FitToScreen();
+        }
+        public byte[] SearchAnswerDtl2Pic(string picName, string shopName, string subjectCode, string type, string code)
+        {
+            string appDomainPath = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = "";
+            if (type == "SpecialCase")
+            {
+                filePath = appDomainPath + @"UploadImage\" + @"SpecialCasePictures\" + code + @"\" + picName;
+            }
+            else if (type == "Notice")
+            {
+                filePath = appDomainPath + @"UploadImage\" + @"NoticeAttachment\" + code + @"\" + picName;
+            }
+            else
+            {
+                if (File.Exists(appDomainPath + @"UploadImage\" + shopName + @"\" + subjectCode + @"\" + picName + ".jpg"))
+                {
+                    filePath = appDomainPath + @"UploadImage\" + shopName + @"\" + subjectCode + @"\" + picName + ".jpg";
+                }
+                if (File.Exists(appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".jpg"))
+                {
+                    filePath = appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".jpg";
+                }
+                if (File.Exists(appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".doc"))
+                {
+                    filePath = appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".doc";
+                }
+                if (File.Exists(appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".docx"))
+                {
+                    filePath = appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".docx";
+                }
+                if (File.Exists(appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".xls"))
+                {
+                    filePath = appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".xls";
+                }
+                if (File.Exists(appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".xlsx"))
+                {
+                    filePath = appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".xlsx";
+                }
+                if (File.Exists(appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".ppt"))
+                {
+                    filePath = appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".ppt";
+                }
+                if (File.Exists(appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".pptx"))
+                {
+                    filePath = appDomainPath + @"UploadImage\" + shopName + @"\" + picName + ".pptx";
+                }
+            }
+            //if (!File.Exists(filePath))
+            //{
+            if (!Directory.Exists(appDomainPath + @"UploadImage\"))
+            {
+                Directory.CreateDirectory(appDomainPath + @"UploadImage\");
+            }
+            if (!Directory.Exists(appDomainPath + @"UploadImage\" + @"\" + shopName))
+            {
+                Directory.CreateDirectory(appDomainPath + @"UploadImage\" + @"\" + shopName);
+            }
+            if (!Directory.Exists(appDomainPath + @"UploadImage\" + @"\" + shopName + @"\" + subjectCode))
+            {
+                Directory.CreateDirectory(appDomainPath + @"UploadImage\" + @"\" + shopName + @"\" + subjectCode);
+            }
+
+            try
+            {
+                UploadFileToAliyun aliyun = new UploadFileToAliyun();
+                aliyun.GetObject("yrtech", "GACFCA" + @"/" + shopName + @"/" + subjectCode + @"/" + picName.Replace(".jpg", "") + ".jpg",
+                               appDomainPath + @"UploadImage\" + shopName + @"\" + subjectCode + @"\" + picName.Replace(".jpg", "") + ".jpg");
+                filePath = appDomainPath + @"UploadImage\" + shopName + @"\" + subjectCode + @"\" + picName.Replace(".jpg", "") + ".jpg";
+            }
+            catch (Aliyun.OpenServices.OpenStorageService.OssException ex)
+            {
+
+            }
+
+            //}
+            if (File.Exists(filePath))
+            {
+                using (FileStream fs = new FileStream(filePath, FileMode.Open))
+                {
+                    byte[] b = new byte[fs.Length];
+                    fs.Read(b, 0, b.Length);
+                    fs.Close();
+                    return b;
+                }
+            }
+            else
+            {
+                return null;
+            }
+
         }
     }
 }
