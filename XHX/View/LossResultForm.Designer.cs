@@ -53,6 +53,9 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDel = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtSubjectCode = new System.Windows.Forms.TextBox();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddRow = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grcLossResult1)).BeginInit();
@@ -242,7 +245,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(580, 451);
+            this.tabPage3.Size = new System.Drawing.Size(580, 450);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "失分说明3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -253,7 +256,7 @@
             this.grcLossResult3.Location = new System.Drawing.Point(3, 3);
             this.grcLossResult3.MainView = this.grvLossResult3;
             this.grcLossResult3.Name = "grcLossResult3";
-            this.grcLossResult3.Size = new System.Drawing.Size(574, 445);
+            this.grcLossResult3.Size = new System.Drawing.Size(574, 444);
             this.grcLossResult3.TabIndex = 2;
             this.grcLossResult3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvLossResult3});
@@ -319,7 +322,10 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.simpleButton3);
+            this.panelControl1.Controls.Add(this.txtSubjectCode);
             this.panelControl1.Controls.Add(this.btnDel);
+            this.panelControl1.Controls.Add(this.simpleButton2);
             this.panelControl1.Controls.Add(this.btnSave);
             this.panelControl1.Controls.Add(this.btnAddRow);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -329,6 +335,33 @@
             this.panelControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panelControl1.Size = new System.Drawing.Size(592, 42);
             this.panelControl1.TabIndex = 11;
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.simpleButton3.Location = new System.Drawing.Point(230, 10);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(87, 27);
+            this.simpleButton3.TabIndex = 15;
+            this.simpleButton3.Text = "Excel下载";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // txtSubjectCode
+            // 
+            this.txtSubjectCode.Location = new System.Drawing.Point(57, 12);
+            this.txtSubjectCode.Name = "txtSubjectCode";
+            this.txtSubjectCode.Size = new System.Drawing.Size(100, 21);
+            this.txtSubjectCode.TabIndex = 14;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.simpleButton2.Location = new System.Drawing.Point(163, 10);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(61, 23);
+            this.simpleButton2.TabIndex = 13;
+            this.simpleButton2.Text = "查询";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // btnSave
             // 
@@ -373,6 +406,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grvLossResult3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -406,5 +440,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private System.Windows.Forms.TextBox txtSubjectCode;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }
